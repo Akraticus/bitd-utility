@@ -22,7 +22,7 @@ function getRandomElementFromWeightedCollection(collection){
         });
 
         // Get a random element from the spread list
-        var randomElementIndex = randomIntFromInterval(1, spreadCollection.length);
+        var randomElementIndex = randomIntFromInterval(0, spreadCollection.length - 1);
         var element = spreadCollection[randomElementIndex];
 
         // we recursively try to get random elements from that element, since it can be another collection of weighted elements
