@@ -8,12 +8,11 @@ let directory = "Data";
 
 function getCollection(filename){
     var finalPath = path.join(directory, filename);
-    console.log("Final path: " + finalPath);
     if(!fs.existsSync(finalPath)) return null;
 
     var data = fs.readFileSync(finalPath);
     var parsed = JSON.parse(data);
-    prototypeReviver(parsed);
+    parsed.forEach(wc => prototypeReviver(wc));
 
     return parsed;
 }
@@ -21,7 +20,7 @@ function getCollection(filename){
 function prototypeReviver(object){
     if(object.value === undefined) return object;
 
-    if(typeof object.value == Array){
+    if(Array.isArray(object.value)){
         Object.setPrototypeOf(object, WeightedCollection.prototype);
         object.value.forEach(v => prototypeReviver(v));
     }

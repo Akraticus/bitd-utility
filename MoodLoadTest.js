@@ -1,4 +1,6 @@
 const loader = require("./WeightedCollectionLoader");
+const collection = require("./WeightedItems");
 
-const moods = loader.getCollection("mood.json");
-console.log(moods);
+const data = loader.getCollection("use.json");
+var element = collection.getRandomElementFromWeightedCollection(data);
+console.log(element);
