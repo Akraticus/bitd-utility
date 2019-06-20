@@ -120,3 +120,11 @@ class Score{
         this.faction = params.faction === undefined ? "" : params.faction;
     }
 }
+
+class ScoreOptions{
+    constructor(params) {
+        this.clientType = params.clientType === undefined ? "" : params.clientType;
+        this.targetType = params.targetType === undefined ? "" : params.targetType;
+        this.workType = params.workType === undefined ? "" : params.workType;
+    }
+}
