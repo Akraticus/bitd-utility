@@ -1,0 +1,81 @@
+[{
+    "weight":3,
+    "value":[{
+        "weight":1,
+        "value":"Narrow lane"  
+    },
+    {
+        "weight":1,
+        "value":"Tight alley"  
+    },
+    {
+        "weight":1,
+        "value":"Twisting street"  
+    },
+    {
+        "weight":1,
+        "value":"Rough road"  
+    },
+    {
+        "weight":1,
+        "value":"Bridge"  
+    },
+    {
+        "weight":1,
+        "value":"Waterway"  
+    }]
+},
+{
+    "weight":2,
+    "value":[{
+        "weight":1,
+        "value":"Closed court"  
+    },
+    {
+        "weight":1,
+        "value":"Open plaza"  
+    },
+    {
+        "weight":1,
+        "value":"Paved avenue"  
+    },
+    {
+        "weight":1,
+        "value":"Tunnel"  
+    },
+    {
+        "weight":1,
+        "value":"Wide boulevard"  
+    },
+    {
+        "weight":1,
+        "value":"Roundabout"  
+    }]
+},
+{
+    "weight":1,
+    "value":[{
+        "weight":1,
+        "value":"Elevated"  
+    },
+    {
+        "weight":1,
+        "value":"Flooded"  
+    },
+    {
+        "weight":1,
+        "value":"Suspended"  
+    },
+    {
+        "weight":1,
+        "value":"Subterranean"  
+    },
+    {
+        "weight":1,
+        "value":"Floating"  
+    },
+    {
+        "weight":1,
+        "value":"Private, gated"  
+    }]
+}]

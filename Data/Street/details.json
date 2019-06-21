@@ -1,0 +1,162 @@
+[{
+    "weight":1,
+    "value":[{
+        "weight":1,
+        "value":"Metal supports"  
+    },
+    {
+        "weight":1,
+        "value":"Ironwork gates, fences"  
+    },
+    {
+        "weight":1,
+        "value":"Belching chimneys"  
+    },
+    {
+        "weight":1,
+        "value":"Metal grates, hatches, doors"  
+    },
+    {
+        "weight":1,
+        "value":"Clockwork mechanisms"  
+    },
+    {
+        "weight":1,
+        "value":"Rigging, cables"  
+    }]
+},
+{
+    "weight":1,
+    "value":[{
+        "weight":1,
+        "value":"Stairs, ramps, terraces"  
+    },
+    {
+        "weight":1,
+        "value":"Wooden scaffolds"  
+    },
+    {
+        "weight":1,
+        "value":"Skyways"  
+    },
+    {
+        "weight":1,
+        "value":"Rooftop spaces"  
+    },
+    {
+        "weight":1,
+        "value":"Rails, train cars"  
+    },
+    {
+        "weight":1,
+        "value":"Hidden passages"  
+    }]
+},
+{
+    "weight":1,
+    "value":[{
+        "weight":1,
+        "value":"Banners, pennants"  
+    },
+    {
+        "weight":1,
+        "value":"Festival decorations"  
+    },
+    {
+        "weight":1,
+        "value":"Crowd, parade, riot"  
+    },
+    {
+        "weight":1,
+        "value":"Street performers"  
+    },
+    {
+        "weight":1,
+        "value":"Makeshift stalls, shelters"  
+    },
+    {
+        "weight":1,
+        "value":"Crisscrossing routes"  
+    }]
+},
+{
+    "weight":1,
+    "value":[{
+        "weight":1,
+        "value":"Gang markings"  
+    },
+    {
+        "weight":1,
+        "value":"Patrol posts"  
+    },
+    {
+        "weight":1,
+        "value":"Lookouts"  
+    },
+    {
+        "weight":1,
+        "value":"Stocks, public punishment"  
+    },
+    {
+        "weight":1,
+        "value":"Street crier, visionary"  
+    },
+    {
+        "weight":1,
+        "value":"News stand, public notices"  
+    }]
+},
+{
+    "weight":1,
+    "value":[{
+        "weight":1,
+        "value":"Stray animals"  
+    },
+    {
+        "weight":1,
+        "value":"Landscaping"  
+    },
+    {
+        "weight":1,
+        "value":"Muck, mire"  
+    },
+    {
+        "weight":1,
+        "value":"Construction, demolition"  
+    },
+    {
+        "weight":1,
+        "value":"Foul runoff, fumes, smoke"  
+    },
+    {
+        "weight":1,
+        "value":"Orphans, beggars"  
+    }]
+},
+{
+    "weight":1,
+    "value":[{
+        "weight":1,
+        "value":"Ancient ruin"  
+    },
+    {
+        "weight":1,
+        "value":"Leering gargoyles"  
+    },
+    {
+        "weight":1,
+        "value":"Spirit chimes, wards"  
+    },
+    {
+        "weight":1,
+        "value":"Eerie emptiness"  
+    },
+    {
+        "weight":1,
+        "value":"Quarantine, lockdown"  
+    },
+    {
+        "weight":1,
+        "value":"Shrine offerings"  
+    }]
+}]
