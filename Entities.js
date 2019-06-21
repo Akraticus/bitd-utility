@@ -1,5 +1,6 @@
 class Street{
     constructor(params) {
+        params = params === undefined ? {} : params;
         this.mood = params.mood === undefined ? "" : params.mood;
         this.use = params.use === undefined ? "" : params.use;
         this.type = params.type === undefined ? "" : params.type;
@@ -11,6 +12,7 @@ class Street{
 
 class Impressions{
     constructor(params) {
+        params = params === undefined ? {} : params;
         this.sights = params.sights === undefined || !Array.isArray(params.sights) ? [] : params.sights;
         this.sounds = params.sounds === undefined || !Array.isArray(params.sounds) ? [] : params.sounds;
         this.smells = params.smells === undefined || !Array.isArray(params.smells) ? [] : params.smells;
@@ -19,6 +21,7 @@ class Impressions{
 
 class ImpressionsOptions{
     constructor(params) {
+        params = params === undefined ? {} : params;
         this.sightsAmount = params.sightsAmount === undefined ? 1 : params.sightsAmount;
         this.soundsAmount = params.soundsAmount === undefined ? 1 : params.soundsAmount;
         this.smellsAmount = params.smellsAmount === undefined ? 1 : params.smellsAmount;
@@ -27,6 +30,7 @@ class ImpressionsOptions{
 
 class StreetOptions{
     constructor(params) {
+        params = params === undefined ? {} : params;
         this.impressionsOptions = params.impressionsOptions === undefined ? new ImpressionsOptions() : params.impressionsOptions;
         this.detailsAmount = params.detailsAmount === undefined ? 1 : params.detailsAmount;
         this.propsAmount = params.propsAmount === undefined ? 1 : params.propsAmount;
@@ -147,6 +151,7 @@ class ScoreOptions{
 
 exports.Street = Street;
 exports.StreetOptions = StreetOptions;
+exports.ImpressionsOptions = ImpressionsOptions;
 exports.Building = Building;
 exports.BuildingOptions = BuildingOptions;
 exports.Person = Person;

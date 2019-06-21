@@ -1,6 +1,5 @@
-const loader = require("./WeightedCollectionLoader");
-const collection = require("./WeightedItems");
+const builder  = require("./StreetBuilder.js");
 
-const data = loader.getCollection("use.json");
-var element = collection.getRandomElementFromWeightedCollection(data);
-console.log(element);
+let street = builder.getStreet();
+console.log(street);
+console.log(street.impressions.sights);
