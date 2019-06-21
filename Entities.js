@@ -1,6 +1,7 @@
 class Street{
     constructor(params) {
         params = params === undefined ? {} : params;
+        
         this.mood = params.mood === undefined ? "" : params.mood;
         this.use = params.use === undefined ? "" : params.use;
         this.type = params.type === undefined ? "" : params.type;
@@ -13,6 +14,7 @@ class Street{
 class Impressions{
     constructor(params) {
         params = params === undefined ? {} : params;
+
         this.sights = params.sights === undefined || !Array.isArray(params.sights) ? [] : params.sights;
         this.sounds = params.sounds === undefined || !Array.isArray(params.sounds) ? [] : params.sounds;
         this.smells = params.smells === undefined || !Array.isArray(params.smells) ? [] : params.smells;
@@ -22,6 +24,7 @@ class Impressions{
 class ImpressionsOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
+
         this.sightsAmount = params.sightsAmount === undefined ? 1 : params.sightsAmount;
         this.soundsAmount = params.soundsAmount === undefined ? 1 : params.soundsAmount;
         this.smellsAmount = params.smellsAmount === undefined ? 1 : params.smellsAmount;
@@ -31,6 +34,7 @@ class ImpressionsOptions{
 class StreetOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
+
         this.impressionsOptions = params.impressionsOptions === undefined ? new ImpressionsOptions() : params.impressionsOptions;
         this.detailsAmount = params.detailsAmount === undefined ? 1 : params.detailsAmount;
         this.propsAmount = params.propsAmount === undefined ? 1 : params.propsAmount;
@@ -39,6 +43,8 @@ class StreetOptions{
 
 class Building{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.exterior = params.exterior === undefined ? new Exterior() : params.exterior;
         this.details = params.details === undefined ? "" : params.details;
         this.use = params.use === undefined ? "" : params.use;
@@ -48,12 +54,14 @@ class Building{
 
 class BuildingOptions{
     constructor(params) {
+        params = params === undefined ? {} : params;
         this.itemsAmount = params.itemsAmount === undefined ? 1 : params.itemsAmount;
     }
 }
 
 class Exterior{
     constructor(params) {
+        params = params === undefined ? {} : params;
         this.material = params.material === undefined ? "" : params.material;
         this.details = params.details === undefined ? "" : params.details;
     }
@@ -61,6 +69,8 @@ class Exterior{
 
 class Person{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.name = params.name === undefined ? "" : params.name;
         this.familyName = params.familyName === undefined ? "" : params.familyName;
         this.alias = params.alias === undefined ? "" : params.alias;
@@ -74,6 +84,8 @@ class Person{
 
 class PersonOptions{
     constructor(params) {
+        params = params === undefined ? {} : params;
+        
         this.goalAmount = params.goalAmount === undefined ? 1 : params.goalAmount;
         this.personalityOptions = params.personalityOptions === undefined ? new PersonalityOptions() : params.personalityOptions;
     }
@@ -81,6 +93,8 @@ class PersonOptions{
 
 class Appearance{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.sex = params.sex === undefined ? "" : params.sex;
         this.heritage = params.heritage === undefined ? "" : params.heritage;
         this.look = params.look === undefined ? "" : params.look;
@@ -91,6 +105,8 @@ class Appearance{
 
 class Personality{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.traits = params.traits === undefined || !Array.isArray(params.traits) ? [] : params.traits;
         this.interests = params.interests === undefined || !Array.isArray(params.interests) ? [] : params.interests;
         this.quirks = params.quirks === undefined || !Array.isArray(params.quirks) ? [] : params.quirks;
@@ -99,6 +115,8 @@ class Personality{
 
 class PersonalityOptions{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.traitsAmount = params.traitsAmount === undefined ? 1 : params.traitsAmount;
         this.interestsAmount = params.interestsAmount === undefined ? 1 : params.interestsAmount;
         this.quirksAmount = params.quirksAmount === undefined ? 1 : params.quirksAmount;
@@ -107,6 +125,8 @@ class PersonalityOptions{
 
 class Devil{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.name = params.name === undefined ? "" : params.name;
         this.feature = params.feature === undefined ? "" : params.feature; 
         this.aspect = params.aspect === undefined ? "" : params.aspect;
@@ -119,6 +139,8 @@ class Devil{
 
 class ForgottenGod{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.name = params.name === undefined ? "" : params.name;
         this.cultPractices = params.cultPractices === undefined || !Array.isArray(params.cultPractices) ? [] : params.cultPractices;
     }
@@ -126,12 +148,16 @@ class ForgottenGod{
 
 class ForgottenGodOptions{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.cultPracticeAmount = params.cultPracticeAmount === undefined ? 1 : params.cultPracticeAmount;
     }
 }
 
 class Score{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.client = params.client === undefined ? "" : params.client;
         this.target = params.target === undefined ? "" : params.target;
         this.work = params.work === undefined ? "" : params.work;
@@ -143,6 +169,8 @@ class Score{
 
 class ScoreOptions{
     constructor(params) {
+        params = params === undefined ? {} : params;
+
         this.clientType = params.clientType === undefined ? "" : params.clientType;
         this.targetType = params.targetType === undefined ? "" : params.targetType;
         this.workType = params.workType === undefined ? "" : params.workType;
