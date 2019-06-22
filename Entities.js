@@ -1,4 +1,4 @@
-class Street{
+exports.Street = class Street{
     constructor(params) {
         params = params === undefined ? {} : params;
         
@@ -11,7 +11,7 @@ class Street{
     }
 }
 
-class Impressions{
+exports.Impressions = class Impressions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -21,7 +21,7 @@ class Impressions{
     }
 }
 
-class ImpressionsOptions{
+exports.ImpressionsOptions = class ImpressionsOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -31,7 +31,7 @@ class ImpressionsOptions{
     }
 }
 
-class StreetOptions{
+exports.StreetOptions = class StreetOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -41,7 +41,7 @@ class StreetOptions{
     }
 }
 
-class Building{
+exports.Building = class Building{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -52,14 +52,14 @@ class Building{
     }
 }
 
-class BuildingOptions{
+exports.BuildingOptions = class BuildingOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
         this.itemsAmount = params.itemsAmount === undefined ? 1 : params.itemsAmount;
     }
 }
 
-class Exterior{
+exports.Exterior = class Exterior{
     constructor(params) {
         params = params === undefined ? {} : params;
         this.material = params.material === undefined ? "" : params.material;
@@ -67,7 +67,7 @@ class Exterior{
     }
 }
 
-class Person{
+exports.Person = class Person{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -82,7 +82,7 @@ class Person{
     }
 }
 
-class PersonOptions{
+exports.PersonOptions = class PersonOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
         
@@ -91,7 +91,7 @@ class PersonOptions{
     }
 }
 
-class Appearance{
+exports.Appearance = class Appearance{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -103,7 +103,7 @@ class Appearance{
     }
 }
 
-class Personality{
+exports.Personality = class Personality{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -113,7 +113,7 @@ class Personality{
     }
 }
 
-class PersonalityOptions{
+exports.PersonalityOptions = class PersonalityOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -123,7 +123,7 @@ class PersonalityOptions{
     }
 }
 
-class Devil{
+exports.Devil = class Devil{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -137,7 +137,7 @@ class Devil{
     }
 }
 
-class ForgottenGod{
+exports.ForgottenGod = class ForgottenGod{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -146,7 +146,7 @@ class ForgottenGod{
     }
 }
 
-class ForgottenGodOptions{
+exports.ForgottenGodOptions = class ForgottenGodOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -154,7 +154,7 @@ class ForgottenGodOptions{
     }
 }
 
-class Score{
+exports.Score = class Score{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -167,7 +167,7 @@ class Score{
     }
 }
 
-class ScoreOptions{
+exports.ScoreOptions = class ScoreOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -176,18 +176,3 @@ class ScoreOptions{
         this.workType = params.workType === undefined ? "" : params.workType;
     }
 }
-
-exports.Street = Street;
-exports.StreetOptions = StreetOptions;
-exports.ImpressionsOptions = ImpressionsOptions;
-exports.Building = Building;
-exports.BuildingOptions = BuildingOptions;
-exports.Person = Person;
-exports.PersonOptions = PersonOptions;
-exports.Personality = Personality;
-exports.PersonalityOptions = PersonalityOptions;
-exports.Devil = Devil;
-exports.ForgottenGod = ForgottenGod;
-exports.ForgottenGodOptions = ForgottenGodOptions;
-exports.Score = Score;
-exports.ScoreOptions = ScoreOptions;
