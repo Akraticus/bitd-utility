@@ -1,5 +1,5 @@
-const StreetOptions = require("./Entities.js").StreetOptions;
-const Builder  = require("./StreetBuilder.js");
+const StreetOptions = require("./DataCarriers/Entities.js/index.js").StreetOptions;
+const Builder  = require("./Builders/StreetBuilder.js/index.js");
 
 let streetOptions = new StreetOptions();
 streetOptions.detailsAmount = -3;

@@ -1,11 +1,12 @@
-class WeightedValue{
+/* A value with an optional weight. A weight is used in a collection of values to determine its probability of being randomly selected.*/
+exports.WeightedValue = class WeightedValue{
     constructor(value, weight) {
         this.value = value;
         this.weight = weight == undefined ? 1 : weight;
     }
 }
 
-class WeightedCollection extends WeightedValue{
+exports.WeightedCollection = class WeightedCollection extends WeightedValue{
     constructor(weight) {
         super(new Array(), weight);
     }
@@ -77,6 +78,3 @@ function randomIntFromInterval(min,max) // min and max included
 {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-
-exports.WeightedCollection = WeightedCollection;
-exports.WeightedValue = WeightedValue;

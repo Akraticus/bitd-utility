@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const weightedItems = require("./WeightedItems");
+const weightedItems = require("./DataCarriers/WeightedItems");
 const WeightedValue = weightedItems.WeightedValue;
 const WeightedCollection = weightedItems.WeightedCollection;
 

@@ -1,5 +1,5 @@
-const Entities = require("./Entities.js");
-const StreetBuilder = require("./StreetBuilder.js");
+const Entities = require("./DataCarriers/Entities.js");
+const StreetBuilder = require("./Builders/StreetBuilder.js");
 
 exports.getDefaultStreet = function getDefaultStreet(){
     return new Entities.Street();

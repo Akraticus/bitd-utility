@@ -1,6 +1,6 @@
-const Entities = require("./Entities.js");
+const Entities = require("../DataCarriers/Entities.js/index.js");
 const Street = Entities.Street;
-const Loader = require("./WeightedCollectionLoader.js");
+const Loader = require("../WeightedCollectionLoader.js");
 
 /** Builds a Street-object based on the provided options. If no options are provided, defaults are used. */
 exports.getStreet = function getStreet(streetOptions){
