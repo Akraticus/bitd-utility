@@ -7,7 +7,6 @@ exports.getDefaultStreet = function getDefaultStreet(){
 
 exports.getStreet = function getStreet(streetOptions){
     streetOptions = streetOptions === undefined ? new Entities.StreetOptions() : streetOptions;
-    
     return StreetBuilder.getStreet(streetOptions);
 }
 

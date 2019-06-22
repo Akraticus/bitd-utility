@@ -1,9 +1,10 @@
 const Entities = require("./Entities.js");
 const Street = Entities.Street;
 const Loader = require("./WeightedCollectionLoader.js");
-const WeightedItem = require("./WeightedItems.js");
 
+/** Builds a Street-object based on the provided options. If no options are provided, defaults are used. */
 exports.getStreet = function getStreet(streetOptions){
+    // undefined => load defaults
     streetOptions = streetOptions === undefined ? new Entities.StreetOptions() : streetOptions;
 
     Loader.setDirectory("Data/Street");
@@ -17,36 +18,49 @@ exports.getStreet = function getStreet(streetOptions){
     let props = Loader.getCollection("props.json");
 
     let street = new Street();
-    street.mood = WeightedItem.getRandomElementFromWeightedCollection(moods);
-    street.use = WeightedItem.getRandomElementFromWeightedCollection(uses);
-    street.type = WeightedItem.getRandomElementFromWeightedCollection(types);
 
-    streetOptions.detailsAmount = streetOptions.detailsAmount === undefined || streetOptions.detailsAmount < 0 ? 1 : streetOptions.detailsAmount;
+    // MOOD, USE, TYPE
+    street.mood = moods.spliceRandomElement().value;
+    street.use = uses.spliceRandomElement().value;
+    street.type = types.spliceRandomElement().value;
+
+    // DETAILS
+    // Undefined || <0 => set to 0
+    streetOptions.detailsAmount = streetOptions.detailsAmount === undefined || streetOptions.detailsAmount < 0 ? 0 : streetOptions.detailsAmount;
     for(var i = 0; i < streetOptions.detailsAmount; i++){
-        // todo: ensure no duplicates
-        street.details.push(WeightedItem.getRandomElementFromWeightedCollection(details));
-    }
-    streetOptions.propsAmount = streetOptions.propsAmount === undefined || streetOptions.propsAmount < 0 ? 1 : streetOptions.propsAmount;
-    for(var i = 0; i < streetOptions.propsAmount; i++){
-        // todo: ensure no duplicates
-        street.props.push(WeightedItem.getRandomElementFromWeightedCollection(props));
+        street.details.push(details.spliceRandomElement().value);
     }
 
+    // PROPS
+    // Undefined || <0 => set to 0
+    streetOptions.propsAmount = streetOptions.propsAmount === undefined || streetOptions.propsAmount < 0 ? 0 : streetOptions.propsAmount;
+    for(var i = 0; i < streetOptions.propsAmount; i++){
+        street.props.push(props.spliceRandomElement().value);
+    }
+
+    // IMPRESSIONS
+    // Undefined => load defaults
     let impressionsOptions = streetOptions.impressionsOptions = streetOptions.impressionsOptions === undefined ? new Entities.ImpressionsOptions() : streetOptions.impressionsOptions;
-    impressionsOptions.sightsAmount = impressionsOptions.sightsAmount === undefined || streetOptions.sightsAmount < 1 ? 0 : streetOptions.sightsAmount;
+
+    // SIGHTS
+    // Undefined || <0 => set to 0
+    impressionsOptions.sightsAmount = impressionsOptions.sightsAmount === undefined || impressionsOptions.sightsAmount < 0 ? 0 : impressionsOptions.sightsAmount;
     for(var i = 0; i < impressionsOptions.sightsAmount; i++){
-        // todo: ensure no duplicates
-        street.impressions.sights.push(WeightedItem.getRandomElementFromWeightedCollection(sights));
+        street.impressions.sights.push(sights.spliceRandomElement().value);
     }
-    impressionsOptions.soundsAmount = impressionsOptions.soundsAmount === undefined || streetOptions.soundsAmount < 1 ? 0 : streetOptions.soundsAmount;
+
+    // SOUNDS
+    // Undefined || <0 => set to 0
+    impressionsOptions.soundsAmount = impressionsOptions.soundsAmount === undefined || impressionsOptions.soundsAmount < 0 ? 0 : impressionsOptions.soundsAmount;
     for(var i = 0; i < impressionsOptions.soundsAmount; i++){
-        // todo: ensure no duplicates
-        street.impressions.sounds.push(WeightedItem.getRandomElementFromWeightedCollection(sounds));
+        street.impressions.sounds.push(sounds.spliceRandomElement().value);
     }
-    impressionsOptions.smellsAmount = impressionsOptions.smellsAmount === undefined || streetOptions.smellsAmount < 1 ? 0 : streetOptions.smellsAmount;
+
+    // SMELLS
+    // Undefined || <0 => set to 0
+    impressionsOptions.smellsAmount = impressionsOptions.smellsAmount === undefined || impressionsOptions.smellsAmount < 0 ? 0 : impressionsOptions.smellsAmount;
     for(var i = 0; i < impressionsOptions.smellsAmount; i++){
-        // todo: ensure no duplicates
-        street.impressions.smells.push(WeightedItem.getRandomElementFromWeightedCollection(smells));
+        street.impressions.smells.push(smells.spliceRandomElement().value);
     }
 
     return street;
