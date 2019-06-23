@@ -1,4 +1,4 @@
-const Entities = require("../DataCarriers/Entities.js/index.js");
+const Entities = require("../DataCarriers/Entities.js");
 const Street = Entities.Street;
 const Loader = require("../WeightedCollectionLoader.js");
 

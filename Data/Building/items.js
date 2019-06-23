@@ -1,0 +1,108 @@
+[{
+    "weight":1,
+    "value":"Chalkboard"
+},
+{
+    "weight":1,
+    "value":"Desks"
+},
+{
+    "weight":1,
+    "value":"Papers"
+},
+{
+    "weight":1,
+    "value":"Maps"
+},
+{
+    "weight":1,
+    "value":"Charts"
+},
+{
+    "weight":1,
+    "value":"Diagrams"
+},
+{
+    "weight":1,
+    "value":"Books"
+},
+{
+    "weight":1,
+    "value":"Scrolls"
+},
+{
+    "weight":1,
+    "value":"Bookcases"
+},
+{
+    "weight":1,
+    "value":"Lamp"
+},
+{
+    "weight":1,
+    "value":"Inkwell"
+},
+{
+    "weight":1,
+    "value":"Writing desk"
+},
+{
+    "weight":1,
+    "value":"Clock"
+},
+{
+    "weight":1,
+    "value":"Cabinet"
+},
+{
+    "weight":1,
+    "value":"Shelves"
+},
+{
+    "weight":1,
+    "value":"Table"
+},
+{
+    "weight":1,
+    "value":"Chairs"
+},
+{
+    "weight":1,
+    "value":"Notebooks"
+},
+{
+    "weight":1,
+    "value":"Bed"
+},
+{
+    "weight":1,
+    "value":"Bureau"
+},
+{
+    "weight":1,
+    "value":"Chalkboard"
+},
+{
+    "weight":1,
+    "value":"Chalkboard"
+},
+{
+    "weight":1,
+    "value":"Chalkboard"
+},
+{
+    "weight":1,
+    "value":"Chalkboard"
+},
+{
+    "weight":1,
+    "value":"Chalkboard"
+},
+{
+    "weight":1,
+    "value":"Chalkboard"
+},
+{
+    "weight":1,
+    "value":"Chalkboard"
+}]

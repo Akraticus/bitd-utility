@@ -1,0 +1,174 @@
+[{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Market house"
+        },
+        {
+            "weight":1,
+            "value":"Restaurant"
+        },
+        {
+            "weight":1,
+            "value":"Bar, lounge"
+        },
+        {
+            "weight":1,
+            "value":"Academy"
+        },
+        {
+            "weight":1,
+            "value":"Salon"
+        },
+        {
+            "weight":1,
+            "value":"Cafe"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Floristry"
+        },
+        {
+            "weight":1,
+            "value":"Tobacconist"
+        },
+        {
+            "weight":1,
+            "value":"Book shop"
+        },
+        {
+            "weight":1,
+            "value":"Jeweler"
+        },
+        {
+            "weight":1,
+            "value":"Clothier"
+        },
+        {
+            "weight":1,
+            "value":"Gallery"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Apothecary"
+        },
+        {
+            "weight":1,
+            "value":"Horse stables"
+        },
+        {
+            "weight":1,
+            "value":"Distillery"
+        },
+        {
+            "weight":1,
+            "value":"Vintner"
+        },
+        {
+            "weight":1,
+            "value":"Master artisan"
+        },
+        {
+            "weight":1,
+            "value":"Boat house"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Theater"
+        },
+        {
+            "weight":1,
+            "value":"Opera house"
+        },
+        {
+            "weight":1,
+            "value":"Apartment building"
+        },
+        {
+            "weight":1,
+            "value":"Townhouse"
+        },
+        {
+            "weight":1,
+            "value":"Manor house"
+        },
+        {
+            "weight":1,
+            "value":"Villa"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Clinic"
+        },
+        {
+            "weight":1,
+            "value":"Temple"
+        },
+        {
+            "weight":1,
+            "value":"Cistern"
+        },
+        {
+            "weight":1,
+            "value":"Watch post"
+        },
+        {
+            "weight":1,
+            "value":"Park"
+        },
+        {
+            "weight":1,
+            "value":"Monument"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Archive"
+        },
+        {
+            "weight":1,
+            "value":"Spiritualist"
+        },
+        {
+            "weight":1,
+            "value":"Bank"
+        },
+        {
+            "weight":1,
+            "value":"Alchemist"
+        },
+        {
+            "weight":1,
+            "value":"Power plant"
+        },
+        {
+            "weight":1,
+            "value":"Radiant energy garden"
+        }]
+    ]
+}]

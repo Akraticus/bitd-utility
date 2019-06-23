@@ -1,8 +1,8 @@
-const StreetOptions = require("./DataCarriers/Entities.js/index.js").StreetOptions;
-const Builder  = require("./Builders/StreetBuilder.js/index.js");
+const Options = require("./DataCarriers/Entities.js").BuildingOptions;
+const Builder  = require("./Builders/BuildingBuilder.js");
 
-let streetOptions = new StreetOptions();
-streetOptions.detailsAmount = -3;
-streetOptions.propsAmount = -3;
-let street = Builder.getStreet(streetOptions);
+let buildingOptions = new Options();
+buildingOptions.detailsAmount = -3;
+buildingOptions.propsAmount = -3;
+let street = Builder.getBuilding(buildingOptions);
 console.log(street);

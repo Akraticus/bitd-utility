@@ -1,5 +1,6 @@
 const Entities = require("./DataCarriers/Entities.js");
 const StreetBuilder = require("./Builders/StreetBuilder.js");
+const BuildingBuilder = require("./Builders/BuildingBuilder.js");
 
 exports.getDefaultStreet = function getDefaultStreet(){
     return new Entities.Street();
@@ -12,6 +13,11 @@ exports.getStreet = function getStreet(streetOptions){
 
 exports.getDefaultBuilding = function getDefaultBuilding(){
     return new Entities.Building();
+}
+
+exports.getBuilding = function getBuilding(buildingOptions){
+    buildingOptions = buildingOptions === undefined ? new Entities.BuildingOptions() : buildingOptions;
+    return BuildingBuilder.getBuilding(buildingOptions);
 }
 
 exports.getDefaultPerson = function getDefaultPerson(){

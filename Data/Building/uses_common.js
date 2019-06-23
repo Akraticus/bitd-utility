@@ -1,0 +1,174 @@
+[{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Bunk house"
+        },
+        {
+            "weight":1,
+            "value":"Inn"
+        },
+        {
+            "weight":1,
+            "value":"Tavern"
+        },
+        {
+            "weight":1,
+            "value":"Gambling hall"
+        },
+        {
+            "weight":1,
+            "value":"Drug den"
+        },
+        {
+            "weight":1,
+            "value":"Brothel"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Market"
+        },
+        {
+            "weight":1,
+            "value":"Workshop"
+        },
+        {
+            "weight":1,
+            "value":"Bakery"
+        },
+        {
+            "weight":1,
+            "value":"Butchery"
+        },
+        {
+            "weight":1,
+            "value":"Forge"
+        },
+        {
+            "weight":1,
+            "value":"Tailory"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Work house"
+        },
+        {
+            "weight":1,
+            "value":"Goat stables"
+        },
+        {
+            "weight":1,
+            "value":"Brewery"
+        },
+        {
+            "weight":1,
+            "value":"Watch post"
+        },
+        {
+            "weight":1,
+            "value":"Court, jail"
+        },
+        {
+            "weight":1,
+            "value":"Dock"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Ruin"
+        },
+        {
+            "weight":1,
+            "value":"Row houses"
+        },
+        {
+            "weight":1,
+            "value":"Tenements"
+        },
+        {
+            "weight":1,
+            "value":"Apartment building"
+        },
+        {
+            "weight":1,
+            "value":"Small house"
+        },
+        {
+            "weight":1,
+            "value":"Bath house"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Shrine"
+        },
+        {
+            "weight":1,
+            "value":"Tattooist"
+        },
+        {
+            "weight":1,
+            "value":"Physicker"
+        },
+        {
+            "weight":1,
+            "value":"Fighting pits"
+        },
+        {
+            "weight":1,
+            "value":"Square, fountain"
+        },
+        {
+            "weight":1,
+            "value":"Grotto"
+        }]
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        [{
+            "weight":1,
+            "value":"Warehouse"
+        },
+        {
+            "weight":1,
+            "value":"Stockyard"
+        },
+        {
+            "weight":1,
+            "value":"Factory"
+        },
+        {
+            "weight":1,
+            "value":"Refinery"
+        },
+        {
+            "weight":1,
+            "value":"Eelery"
+        },
+        {
+            "weight":1,
+            "value":"Mushroom garden"
+        }]
+    ]
+}]
