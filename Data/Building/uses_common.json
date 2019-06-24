@@ -1,174 +1,170 @@
 [{
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Dripping water"
+            "value":"Bunk house"
         },
         {
             "weight":1,
-            "value":"Creaking floorboards"
+            "value":"Inn"
         },
         {
             "weight":1,
-            "value":"Roaring fires"
+            "value":"Tavern"
         },
         {
             "weight":1,
-            "value":"Smoky lamps"
+            "value":"Gambling hall"
         },
         {
             "weight":1,
-            "value":"Buzzing electric lights"
+            "value":"Drug den"
         },
         {
             "weight":1,
-            "value":"Ticking clockworks"
+            "value":"Brothel"
         }]
-    ]
 },
 {
     "weight":1,
     "value":[
         [{
             "weight":1,
-            "value":"Plants, flowers"
+            "value":"Market"
         },
         {
             "weight":1,
-            "value":"Wall hangings, arwork"
+            "value":"Workshop"
         },
         {
             "weight":1,
-            "value":"Shuttered windows"
+            "value":"Bakery"
         },
         {
             "weight":1,
-            "value":"Heavy curtains, thick carpet"
+            "value":"Butchery"
         },
         {
             "weight":1,
-            "value":"Dust, detritus"
+            "value":"Forge"
         },
         {
             "weight":1,
-            "value":"Wear, damage"
+            "value":"Tailory"
         }]
     ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Threadbare, tattered"
+            "value":"Work house"
         },
         {
             "weight":1,
-            "value":"Utilitarian furnishings"
+            "value":"Goat stables"
         },
         {
             "weight":1,
-            "value":"Elegant finery"
+            "value":"Brewery"
         },
         {
             "weight":1,
-            "value":"Lush, comfortable"
+            "value":"Watch post"
         },
         {
             "weight":1,
-            "value":"Rough-spun simplicity"
+            "value":"Court, jail"
         },
         {
             "weight":1,
-            "value":"Spartan austerity"
+            "value":"Dock"
         }]
-    ]
+    
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Circular stairs, ladders"
+            "value":"Ruin"
         },
         {
             "weight":1,
-            "value":"Secret doors"
+            "value":"Row houses"
         },
         {
             "weight":1,
-            "value":"Catwalks"
+            "value":"Tenements"
         },
         {
             "weight":1,
-            "value":"Skylights"
+            "value":"Apartment building"
         },
         {
             "weight":1,
-            "value":"Balcony"
+            "value":"Small house"
         },
         {
             "weight":1,
-            "value":"Cellar"
+            "value":"Bath house"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Drafty, cold"
+            "value":"Shrine"
         },
         {
             "weight":1,
-            "value":"Stout, quiet"
+            "value":"Tattooist"
         },
         {
             "weight":1,
-            "value":"Cozy, warm"
+            "value":"Physicker"
         },
         {
             "weight":1,
-            "value":"Vaulted, spacious"
+            "value":"Fighting pits"
         },
         {
             "weight":1,
-            "value":"Low, cramped"
+            "value":"Square, fountain"
         },
         {
             "weight":1,
-            "value":"Rickety, ramshackle"
+            "value":"Grotto"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Strange devices"
+            "value":"Warehouse"
         },
         {
             "weight":1,
-            "value":"Weird artifacts"
+            "value":"Stockyard"
         },
         {
             "weight":1,
-            "value":"Spirit wards, old runes"
+            "value":"Factory"
         },
         {
             "weight":1,
-            "value":"Piled jumble of curios"
+            "value":"Refinery"
         },
         {
             "weight":1,
-            "value":"Antique appointments"
+            "value":"Eelery"
         },
         {
             "weight":1,
-            "value":"Shrine, altar"
+            "value":"Mushroom garden"
         }]
-    ]
 }]

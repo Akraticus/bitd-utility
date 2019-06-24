@@ -1,174 +1,168 @@
 [{
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Market house"
+            "value":"Dripping water"
         },
         {
             "weight":1,
-            "value":"Restaurant"
+            "value":"Creaking floorboards"
         },
         {
             "weight":1,
-            "value":"Bar, lounge"
+            "value":"Roaring fires"
         },
         {
             "weight":1,
-            "value":"Academy"
+            "value":"Smoky lamps"
         },
         {
             "weight":1,
-            "value":"Salon"
+            "value":"Buzzing electric lights"
         },
         {
             "weight":1,
-            "value":"Cafe"
+            "value":"Ticking clockworks"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Floristry"
+            "value":"Plants, flowers"
         },
         {
             "weight":1,
-            "value":"Tobacconist"
+            "value":"Wall hangings, arwork"
         },
         {
             "weight":1,
-            "value":"Book shop"
+            "value":"Shuttered windows"
         },
         {
             "weight":1,
-            "value":"Jeweler"
+            "value":"Heavy curtains, thick carpet"
         },
         {
             "weight":1,
-            "value":"Clothier"
+            "value":"Dust, detritus"
         },
         {
             "weight":1,
-            "value":"Gallery"
+            "value":"Wear, damage"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Apothecary"
+            "value":"Threadbare, tattered"
         },
         {
             "weight":1,
-            "value":"Horse stables"
+            "value":"Utilitarian furnishings"
         },
         {
             "weight":1,
-            "value":"Distillery"
+            "value":"Elegant finery"
         },
         {
             "weight":1,
-            "value":"Vintner"
+            "value":"Lush, comfortable"
         },
         {
             "weight":1,
-            "value":"Master artisan"
+            "value":"Rough-spun simplicity"
         },
         {
             "weight":1,
-            "value":"Boat house"
+            "value":"Spartan austerity"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Theater"
+            "value":"Circular stairs, ladders"
         },
         {
             "weight":1,
-            "value":"Opera house"
+            "value":"Secret doors"
         },
         {
             "weight":1,
-            "value":"Apartment building"
+            "value":"Catwalks"
         },
         {
             "weight":1,
-            "value":"Townhouse"
+            "value":"Skylights"
         },
         {
             "weight":1,
-            "value":"Manor house"
+            "value":"Balcony"
         },
         {
             "weight":1,
-            "value":"Villa"
+            "value":"Cellar"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Clinic"
+            "value":"Drafty, cold"
         },
         {
             "weight":1,
-            "value":"Temple"
+            "value":"Stout, quiet"
         },
         {
             "weight":1,
-            "value":"Cistern"
+            "value":"Cozy, warm"
         },
         {
             "weight":1,
-            "value":"Watch post"
+            "value":"Vaulted, spacious"
         },
         {
             "weight":1,
-            "value":"Park"
+            "value":"Low, cramped"
         },
         {
             "weight":1,
-            "value":"Monument"
+            "value":"Rickety, ramshackle"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Archive"
+            "value":"Strange devices"
         },
         {
             "weight":1,
-            "value":"Spiritualist"
+            "value":"Weird artifacts"
         },
         {
             "weight":1,
-            "value":"Bank"
+            "value":"Spirit wards, old runes"
         },
         {
             "weight":1,
-            "value":"Alchemist"
+            "value":"Piled jumble of curios"
         },
         {
             "weight":1,
-            "value":"Power plant"
+            "value":"Antique appointments"
         },
         {
             "weight":1,
-            "value":"Radiant energy garden"
+            "value":"Shrine, altar"
         }]
-    ]
 }]

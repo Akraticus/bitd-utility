@@ -1,4 +1,4 @@
-exports.Street = class Street{
+class Street{
     constructor(params) {
         params = params === undefined ? {} : params;
         
@@ -11,7 +11,7 @@ exports.Street = class Street{
     }
 }
 
-exports.Impressions = class Impressions{
+class Impressions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -21,7 +21,7 @@ exports.Impressions = class Impressions{
     }
 }
 
-exports.ImpressionsOptions = class ImpressionsOptions{
+class ImpressionsOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -31,7 +31,7 @@ exports.ImpressionsOptions = class ImpressionsOptions{
     }
 }
 
-exports.StreetOptions = class StreetOptions{
+class StreetOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -41,7 +41,7 @@ exports.StreetOptions = class StreetOptions{
     }
 }
 
-exports.Building = class Building{
+class Building{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -51,7 +51,7 @@ exports.Building = class Building{
     }
 }
 
-exports.BuildingOptions = class BuildingOptions{
+class BuildingOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -61,7 +61,7 @@ exports.BuildingOptions = class BuildingOptions{
     }
 }
 
-exports.Exterior = class Exterior{
+class Exterior{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -70,7 +70,7 @@ exports.Exterior = class Exterior{
     }
 }
 
-exports.Person = class Person{
+class Person{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -85,7 +85,7 @@ exports.Person = class Person{
     }
 }
 
-exports.PersonOptions = class PersonOptions{
+class PersonOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
         
@@ -94,7 +94,7 @@ exports.PersonOptions = class PersonOptions{
     }
 }
 
-exports.Appearance = class Appearance{
+class Appearance{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -106,7 +106,7 @@ exports.Appearance = class Appearance{
     }
 }
 
-exports.Personality = class Personality{
+class Personality{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -116,7 +116,7 @@ exports.Personality = class Personality{
     }
 }
 
-exports.PersonalityOptions = class PersonalityOptions{
+class PersonalityOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -126,7 +126,7 @@ exports.PersonalityOptions = class PersonalityOptions{
     }
 }
 
-exports.Devil = class Devil{
+class Devil{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -140,7 +140,7 @@ exports.Devil = class Devil{
     }
 }
 
-exports.ForgottenGod = class ForgottenGod{
+class ForgottenGod{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -149,7 +149,7 @@ exports.ForgottenGod = class ForgottenGod{
     }
 }
 
-exports.ForgottenGodOptions = class ForgottenGodOptions{
+class ForgottenGodOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -157,7 +157,7 @@ exports.ForgottenGodOptions = class ForgottenGodOptions{
     }
 }
 
-exports.Score = class Score{
+class Score{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -170,7 +170,7 @@ exports.Score = class Score{
     }
 }
 
-exports.ScoreOptions = class ScoreOptions{
+class ScoreOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
@@ -179,3 +179,21 @@ exports.ScoreOptions = class ScoreOptions{
         this.workType = params.workType === undefined ? "" : params.workType;
     }
 }
+
+exports.Street = Street;
+exports.Impressions = Impressions;
+exports.ImpressionsOptions = ImpressionsOptions;
+exports.StreetOptions = StreetOptions;
+exports.Building = Building;
+exports.BuildingOptions = BuildingOptions;
+exports.Exterior = Exterior;
+exports.Person = Person;
+exports.PersonOptions = PersonOptions;
+exports.Appearance = Appearance;
+exports.Personality = Personality;
+exports.PersonalityOptions = PersonalityOptions;
+exports.Devil = Devil;
+exports.ForgottenGod = ForgottenGod;
+exports.ForgottenGodOptions = ForgottenGodOptions;
+exports.Score = Score;
+exports.ScoreOptions = ScoreOptions;

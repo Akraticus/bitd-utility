@@ -1,104 +1,97 @@
 [{
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Bunk house"
+            "value":"Market house"
         },
         {
             "weight":1,
-            "value":"Inn"
+            "value":"Restaurant"
         },
         {
             "weight":1,
-            "value":"Tavern"
+            "value":"Bar, lounge"
         },
         {
             "weight":1,
-            "value":"Gambling hall"
+            "value":"Academy"
         },
         {
             "weight":1,
-            "value":"Drug den"
+            "value":"Salon"
         },
         {
             "weight":1,
-            "value":"Brothel"
+            "value":"Cafe"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Market"
+            "value":"Floristry"
         },
         {
             "weight":1,
-            "value":"Workshop"
+            "value":"Tobacconist"
         },
         {
             "weight":1,
-            "value":"Bakery"
+            "value":"Book shop"
         },
         {
             "weight":1,
-            "value":"Butchery"
+            "value":"Jeweler"
         },
         {
             "weight":1,
-            "value":"Forge"
+            "value":"Clothier"
         },
         {
             "weight":1,
-            "value":"Tailory"
+            "value":"Gallery"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Work house"
+            "value":"Apothecary"
         },
         {
             "weight":1,
-            "value":"Goat stables"
+            "value":"Horse stables"
         },
         {
             "weight":1,
-            "value":"Brewery"
+            "value":"Distillery"
         },
         {
             "weight":1,
-            "value":"Watch post"
+            "value":"Vintner"
         },
         {
             "weight":1,
-            "value":"Court, jail"
+            "value":"Master artisan"
         },
         {
             "weight":1,
-            "value":"Dock"
+            "value":"Boat house"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Ruin"
+            "value":"Theater"
         },
         {
             "weight":1,
-            "value":"Row houses"
-        },
-        {
-            "weight":1,
-            "value":"Tenements"
+            "value":"Opera house"
         },
         {
             "weight":1,
@@ -106,69 +99,70 @@
         },
         {
             "weight":1,
-            "value":"Small house"
+            "value":"Townhouse"
         },
         {
             "weight":1,
-            "value":"Bath house"
+            "value":"Manor house"
+        },
+        {
+            "weight":1,
+            "value":"Villa"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Shrine"
+            "value":"Clinic"
         },
         {
             "weight":1,
-            "value":"Tattooist"
+            "value":"Temple"
         },
         {
             "weight":1,
-            "value":"Physicker"
+            "value":"Cistern"
         },
         {
             "weight":1,
-            "value":"Fighting pits"
+            "value":"Watch post"
         },
         {
             "weight":1,
-            "value":"Square, fountain"
+            "value":"Park"
         },
         {
             "weight":1,
-            "value":"Grotto"
+            "value":"Monument"
         }]
-    ]
 },
 {
     "weight":1,
-    "value":[
+    "value":
         [{
             "weight":1,
-            "value":"Warehouse"
+            "value":"Archive"
         },
         {
             "weight":1,
-            "value":"Stockyard"
+            "value":"Spiritualist"
         },
         {
             "weight":1,
-            "value":"Factory"
+            "value":"Bank"
         },
         {
             "weight":1,
-            "value":"Refinery"
+            "value":"Alchemist"
         },
         {
             "weight":1,
-            "value":"Eelery"
+            "value":"Power plant"
         },
         {
             "weight":1,
-            "value":"Mushroom garden"
+            "value":"Radiant energy garden"
         }]
-    ]
 }]
