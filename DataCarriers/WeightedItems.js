@@ -51,7 +51,12 @@ class WeightedCollection extends WeightedValue{
             // we fill a new array with references to the items in the given collection; multiple references if their weight > 1
             var spreadCollection = new Array();
             collection.forEach(element => {
-                for(var i = 0; i < element.weight; i++){
+                if(element.weight){
+                    for(var i = 0; i < element.weight; i++){
+                        spreadCollection.push(element);
+                    }
+                }
+                else{
                     spreadCollection.push(element);
                 }
             });
@@ -59,7 +64,7 @@ class WeightedCollection extends WeightedValue{
             // Get a random element from the spread list
             var randomElementIndex = randomIntFromInterval(0, spreadCollection.length - 1);
             var element = spreadCollection[randomElementIndex];
-    
+
             // we recursively try to get random elements from that element, since it can be another collection of weighted elements
             return this.spliceRandomElement(element, collection);
         }
