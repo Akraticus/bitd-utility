@@ -4,6 +4,7 @@
   "description": "Utility for generating streets, buildings, people, scores.",
   "main": "index.js",
   "dependencies": {
+    "azure-functions-core-tools": "^2.7.1373",
     "node": "^12.4.0",
     "typescript": "^3.5.2"
   },
