@@ -25,15 +25,20 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
     forgottenGod.name = names.spliceRandomElement().value;
 
     // CULT PRACTICES
-    // if the given option doesn't exist in the list of cult practice types, get a random one
     let cultPracticeTypeIndex = findIndexOfElement(forgottenGodOptions.cultPracticeType, cultPracticeTypes);
-    let cultPracticeType = !cultPracticeTypeIndex || cultPracticeTypeIndex < 0 
+
+    // this means we'll get a new cult practice type for each iteration
+    if(cultPracticeTypeIndex < 0) forgottenGodOptions.cultPracticeType = undefined; 
+
+    // if the given option doesn't exist in the list of cult practice types, get a random one
+    let cultPracticeType = cultPracticeTypeIndex < 0 
         ? cultPracticeTypes.getRandomElement().value.toLowerCase() 
         : cultPracticeTypes.value[cultPracticeTypeIndex].value.toLowerCase();
     for(var i = 0; i < forgottenGodOptions.cultPracticeAmount; i++){
         
+        // if the cultPracticeType option was unset, get a new one
         // if the current cultPracticeType doesn't exist, get a new one
-        if(findIndexOfElement(cultPracticeType, cultPracticeTypes) == -1){
+        if(!forgottenGodOptions.cultPracticeType || findIndexOfElement(cultPracticeType, cultPracticeTypes) == -1){
             // if there are no more cult practice types, we break
             if(cultPracticeTypes.length <= 0) break;
             cultPracticeType = cultPracticeTypes.getRandomElement().value.toLowerCase();
