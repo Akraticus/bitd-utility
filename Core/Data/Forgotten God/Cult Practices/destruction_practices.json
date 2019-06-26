@@ -1,42 +1,42 @@
 [
     {
         "weight":1,
-        "value":"Ritual burning of sacred rune-papers."
+        "value":"Destruction: Ritual burning of sacred rune-papers."
     },
     {
         "weight":1,
-        "value":"Ritual burning of sacred effigies."
+        "value":"Destruction: Ritual burning of sacred effigies."
     },
     {
         "weight":1,
-        "value":"Ritual burning of sacred flesh."
+        "value":"Destruction: Ritual burning of sacred flesh."
     },
     {
         "weight":1,
-        "value":"Ritual burning of sacred hair."
+        "value":"Destruction: Ritual burning of sacred hair."
     },
     {
         "weight":1,
-        "value":"Ritual eradication of spirits."
+        "value":"Destruction: Ritual eradication of spirits."
     },
     {
         "weight":1,
-        "value":"Ritual eradication of demons."
+        "value":"Destruction: Ritual eradication of demons."
     },
     {
         "weight":1,
-        "value":"The breaking of the seals that keep the god from this world."
+        "value":"Destruction: The breaking of the seals that keep the god from this world."
     },
     {
         "weight":1,
-        "value":"Shattering of ritual objects, altars and temples sacred to an enemy order."
+        "value":"Destruction: Shattering of ritual objects, altars and temples sacred to an enemy order."
     },
     {
         "weight":1,
-        "value":"Eradication of weapons, sites, rituals and objects that can harm the god."
+        "value":"Destruction: Eradication of weapons, sites, rituals and objects that can harm the god."
     },
     {
         "weight":1,
-        "value":"Eradication of social, legal and cultural elements that threaten the order."
+        "value":"Destruction: Eradication of social, legal and cultural elements that threaten the order."
     }
 ]

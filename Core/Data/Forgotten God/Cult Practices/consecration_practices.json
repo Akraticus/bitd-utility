@@ -1,38 +1,38 @@
 [
     {
         "weight":1,
-        "value":"Purification by bathing in sacred fluid (blood, wine, milk, oil, etc.)."
+        "value":"Consecration: Purification by bathing in sacred fluid (blood, wine, milk, oil, etc.)."
     },
     {
         "weight":1,
-        "value":"Purification of the gates that give passage to the god into this world."
+        "value":"Consecration: Purification of the gates that give passage to the god into this world."
     },
     {
         "weight":1,
-        "value":"Baptism of an acolyte in spirit well."
+        "value":"Consecration: Baptism of an acolyte in spirit well."
     },
     {
         "weight":1,
-        "value":"Blessing of an object in spirit well."
+        "value":"Consecration: Blessing of an object in spirit well."
     },
     {
         "weight":1,
-        "value":"Bless cult followers with tattoos."
+        "value":"Consecration: Bless cult followers with tattoos."
     },
     {
         "weight":1,
-        "value":"Bless cult followers with scarification."
+        "value":"Consecration: Bless cult followers with scarification."
     },
     {
         "weight":1,
-        "value":"Purify cult followers with mutilation."
+        "value":"Consecration: Purify cult followers with mutilation."
     },
     {
         "weight":1,
-        "value":"Creation of blessed idols, artwork, ritual spaces or artifacts."
+        "value":"Consecration: Creation of blessed idols, artwork, ritual spaces or artifacts."
     },
     {
         "weight":1,
-        "value":"Wards, runes and spirits bound to shun enemies of the order."
+        "value":"Consecration: Wards, runes and spirits bound to shun enemies of the order."
     }
 ]
