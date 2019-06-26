@@ -4,6 +4,6 @@ const Builder  = require("./Builders/ForgottenGodBuilder.js");
 
 let forgottenGodOptions = new Options();
 forgottenGodOptions.cultPracticeAmount = 400;
-forgottenGodOptions.cultPracticeType = "bango";
+forgottenGodOptions.cultPracticeType = undefined;
 let forgottenGod = Builder.getForgottenGod(forgottenGodOptions);
 console.log(forgottenGod);

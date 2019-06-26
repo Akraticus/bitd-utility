@@ -25,11 +25,15 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
     forgottenGod.name = names.spliceRandomElement().value;
 
     // CULT PRACTICES
-    let cultPracticeType = forgottenGodOptions.cultPracticeType;
+    // if the given option doesn't exist in the list of cult practice types, get a random one
+    let cultPracticeTypeIndex = findIndexOfElement(forgottenGodOptions.cultPracticeType, cultPracticeTypes);
+    let cultPracticeType = !cultPracticeTypeIndex || cultPracticeTypeIndex < 0 
+        ? cultPracticeTypes.getRandomElement().value.toLowerCase() 
+        : cultPracticeTypes.value[cultPracticeTypeIndex].value.toLowerCase();
     for(var i = 0; i < forgottenGodOptions.cultPracticeAmount; i++){
         
         // if the current cultPracticeType doesn't exist, get a new one
-        if(cultPracticeTypes.value.findIndex(v => v.value === cultPracticeType) == -1){
+        if(findIndexOfElement(cultPracticeType, cultPracticeTypes) == -1){
             // if there are no more cult practice types, we break
             if(cultPracticeTypes.length <= 0) break;
             cultPracticeType = cultPracticeTypes.getRandomElement().value.toLowerCase();
@@ -99,7 +103,14 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
     return forgottenGod;
 }
 
+function findIndexOfElement(element, collection){
+    if(!element) return -1;
+
+    element = element.toLowerCase();
+    return collection.value.findIndex(v => v.value.toLowerCase() === element)
+}
+
 function removeFromCollection(element, collection){
-    var index = collection.value.findIndex(v => v.value === element);
+    var index = findIndexOfElement(element, collection);
     collection.value.splice(index, 1);
 }
