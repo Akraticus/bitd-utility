@@ -1,11 +1,10 @@
-const Entities = require("../DataCarriers/Entities.js");
-const Street = Entities.Street;
+const Street = require("../DataCarriers/Street.js");
 const Loader = require("../WeightedCollectionLoader.js");
 
 /** Builds a Street-object based on the provided options. If no options are provided, defaults are used. */
 exports.getStreet = function getStreet(streetOptions){
     // undefined => load defaults
-    streetOptions = streetOptions === undefined ? new Entities.StreetOptions() : streetOptions;
+    streetOptions = streetOptions === undefined ? new Street.StreetOptions() : streetOptions;
 
     Loader.setDirectory("Data/Street");
     let moods = Loader.getCollection("moods.json");
@@ -17,7 +16,7 @@ exports.getStreet = function getStreet(streetOptions){
     let details = Loader.getCollection("details.json");
     let props = Loader.getCollection("props.json");
 
-    let street = new Street();
+    let street = new Street.Street();
 
     // MOOD, USE, TYPE
     street.mood = moods.spliceRandomElement().value;
@@ -40,7 +39,7 @@ exports.getStreet = function getStreet(streetOptions){
 
     // IMPRESSIONS
     // Undefined => load defaults
-    let impressionsOptions = streetOptions.impressionsOptions = streetOptions.impressionsOptions === undefined ? new Entities.ImpressionsOptions() : streetOptions.impressionsOptions;
+    let impressionsOptions = streetOptions.impressionsOptions = streetOptions.impressionsOptions === undefined ? new Street.ImpressionsOptions() : streetOptions.impressionsOptions;
 
     // SIGHTS
     // Undefined || <0 => set to 0

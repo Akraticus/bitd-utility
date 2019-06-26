@@ -1,11 +1,10 @@
-const Entities = require("../DataCarriers/Entities.js");
-const Building = Entities.Building;
+const Building = require("../DataCarriers/Building.js");
 const Loader = require("../WeightedCollectionLoader.js");
 
 /** Builds a Street-object based on the provided options. If no options are provided, defaults are used. */
 exports.getBuilding = function getStreet(buildingOptions){
     // undefined => load defaults
-    buildingOptions = buildingOptions === undefined ? new Entities.BuildingOptions() : buildingOptions;
+    buildingOptions = buildingOptions === undefined ? new Building.BuildingOptions() : buildingOptions;
 
     Loader.setDirectory("Data/Building");
     let exterior_details = Loader.getCollection("exterior_details.json");
@@ -14,7 +13,7 @@ exports.getBuilding = function getStreet(buildingOptions){
     let uses_rare = Loader.getCollection("uses_rare.json");
     let items = Loader.getCollection("items.json");
 
-    let building = new Building();
+    let building = new Building.Building();
 
     // USE
     if(buildingOptions.useType.toLowerCase() === "rare"){

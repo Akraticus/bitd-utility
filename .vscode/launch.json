@@ -7,7 +7,13 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Test json-loader",
+            "name": "Street construction",
+            "program": "${workspaceFolder}/StreetLoadTest.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Building construction",
             "program": "${workspaceFolder}\\DataLoadTest.js"
         },
         {

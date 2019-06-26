@@ -1,4 +1,4 @@
-const Options = require("../DataCarriers/Entities.js").StreetOptions;
+const Options = require("../Core/DataCarriers/Street.js").StreetOptions;
 
 module.exports = async function (context, req) {
     context.res = {

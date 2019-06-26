@@ -4,15 +4,15 @@ const weightedItems = require("./DataCarriers/WeightedItems.js");
 const WeightedValue = weightedItems.WeightedValue;
 const WeightedCollection = weightedItems.WeightedCollection;
 
+let root = "Core";
 let directory = "Data";
 
 function getCollection(filename){
-    var finalPath = path.join(directory, filename);
+    var finalPath = path.join(root, directory, filename);
     if(!fs.existsSync(finalPath)) return null;
 
     var data = fs.readFileSync(finalPath);
     var parsed = JSON.parse(data);
-    // parsed.forEach(wc => prototypeReviver(wc));
     parsed = parsed.map(v => prototypeReviver(v));
     parsed = prototypeReviver(parsed);
 
