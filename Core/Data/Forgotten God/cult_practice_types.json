@@ -1,0 +1,26 @@
+[
+    {
+        "weight":1,
+        "value":"sacrifice"
+    },
+    {
+        "weight":1,
+        "value":"congregation"
+    },
+    {
+        "weight":1,
+        "value":"acquisition"
+    },
+    {
+        "weight":1,
+        "value":"destruction"
+    },
+    {
+        "weight":1,
+        "value":"consecration"
+    },
+    {
+        "weight":1,
+        "value":"desecration"
+    }
+]

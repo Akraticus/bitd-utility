@@ -1,7 +1,7 @@
 const Building = require("../DataCarriers/Building.js");
 const Loader = require("../WeightedCollectionLoader.js");
 
-/** Builds a Street-object based on the provided options. If no options are provided, defaults are used. */
+/** Builds a Building data-object based on the provided options. If no options are provided, defaults are used. */
 exports.getBuilding = function getStreet(buildingOptions){
     // undefined => load defaults
     buildingOptions = buildingOptions === undefined ? new Building.BuildingOptions() : buildingOptions;

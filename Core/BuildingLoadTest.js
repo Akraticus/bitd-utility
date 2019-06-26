@@ -5,5 +5,5 @@ const Builder  = require("./Builders/BuildingBuilder.js");
 let buildingOptions = new Options();
 buildingOptions.detailsAmount = 3;
 buildingOptions.itemsAmount = 2;
-let street = Builder.getBuilding(buildingOptions);
-console.log(street);
+let building = Builder.getBuilding(buildingOptions);
+console.log(building);
