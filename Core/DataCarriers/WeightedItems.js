@@ -64,6 +64,9 @@ class WeightedCollection extends WeightedValue{
             // Get a random element from the spread list
             var randomElementIndex = randomIntFromInterval(0, spreadCollection.length - 1);
             var element = spreadCollection[randomElementIndex];
+            
+            // this means that the collection has been emptied
+            if(!element) return undefined;
 
             // we recursively try to get random elements from that element, since it can be another collection of weighted elements
             return this.spliceRandomElement(element, collection);
@@ -75,6 +78,10 @@ class WeightedCollection extends WeightedValue{
             var index = parentCollection.indexOf(collection);
             return parentCollection.splice(index, 1).find(() => true);
         }
+    }
+
+    get length(){
+        return this.value.length;
     }
 }
 

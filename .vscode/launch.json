@@ -4,17 +4,24 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "node",
             "request": "launch",
             "name": "Street construction",
-            "program": "${workspaceFolder}/StreetLoadTest.js"
+            "program": "${workspaceFolder}\\Core\\StreetLoadTest.js"
         },
         {
             "type": "node",
             "request": "launch",
             "name": "Building construction",
-            "program": "${workspaceFolder}\\DataLoadTest.js"
+            "program": "${workspaceFolder}\\Core\\DataLoadTest.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Forgotten God construction",
+            "program": "${workspaceFolder}\\Core\\ForgottenGodLoadTest.js"
         },
         {
             "name": "Attach to Node Functions",

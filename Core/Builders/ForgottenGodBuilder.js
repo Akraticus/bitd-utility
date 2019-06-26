@@ -8,7 +8,7 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
 
     Loader.setDirectory("Data/Forgotten God");
     let names = Loader.getCollection("names.json");
-    let cultPracticeTypes = Loader.getCollection("cult_practice_types.json");
+    let cultPracticeTypes = ForgottenGod.CultPracticeTypes;
 
     Loader.setDirectory("Data/Forgotten God/Cult Practices");
     
@@ -24,49 +24,72 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
     // NAME
     forgottenGod.name = names.spliceRandomElement().value;
 
-    // CULT PRACTICE TYPE
-    let cultPracticeType = "";
-    if(forgottenGodOptions.cultPracticeType){
-        cultPracticeType = forgottenGodOptions.cultPracticeType.toLowerCase();
-        if(!cultPracticeTypes.find(v => v.value.toLowerCase() === cultPracticeType)){
+    // CULT PRACTICES
+    let cultPracticeType = forgottenGodOptions.cultPracticeType;
+    for(var i = 0; i < forgottenGodOptions.cultPracticeAmount; i++){
+        
+        // if the current cultPracticeType doesn't exist, get a new one
+        if(cultPracticeTypes.value.findIndex(v => v.value === cultPracticeType) == -1){
+            // if there are no more cult practice types, we break
+            if(cultPracticeTypes.length <= 0) break;
             cultPracticeType = cultPracticeTypes.getRandomElement().value.toLowerCase();
         }
-    }
-    else {
-        cultPracticeType = cultPracticeTypes.getRandomElement().value.toLowerCase();
-    }
 
-    // CULT PRACTICES
-    for(var i = 0; i < forgottenGodOptions.cultPracticeAmount; i++){
+        // push a new random element from a cult practice list; 
+        // if the list is empty, we remove it from available cult practice types and will get a new one at the beginning of the iteration
         switch(cultPracticeType){
 
             case "acquisition":
                 {
+                    if(acquisitions.length <= 0){
+                        removeFromCollection(cultPracticeType, cultPracticeTypes);
+                        break;
+                    }
                     forgottenGod.cultPractices.push(acquisitions.spliceRandomElement().value);
                     break;
                 }
             case "congregation":
                 {
+                    if(congregations.length <= 0){
+                        removeFromCollection(cultPracticeType, cultPracticeTypes);
+                        break;
+                    }
                     forgottenGod.cultPractices.push(congregations.spliceRandomElement().value);
                     break;
                 }
             case "consecration":
                 {
+                    if(consecrations.length <= 0){
+                        removeFromCollection(cultPracticeType, cultPracticeTypes);
+                        break;
+                    }
                     forgottenGod.cultPractices.push(consecrations.spliceRandomElement().value);
                     break;
                 }
             case "desecration":
                 {
+                    if(desecrations.length <= 0){
+                        removeFromCollection(cultPracticeType, cultPracticeTypes);
+                        break;
+                    }
                     forgottenGod.cultPractices.push(desecrations.spliceRandomElement().value);
                     break;
                 }
             case "destruction":
                 {
+                    if(destructions.length <= 0){
+                        removeFromCollection(cultPracticeType, cultPracticeTypes);
+                        break;
+                    }
                     forgottenGod.cultPractices.push(destructions.spliceRandomElement().value);
                     break;
                 }
             case "sacrifice":
                 {
+                    if(sacrifices.length <= 0){
+                        removeFromCollection(cultPracticeType, cultPracticeTypes);
+                        break;
+                    }
                     forgottenGod.cultPractices.push(sacrifices.spliceRandomElement().value);
                     break;
                 }
@@ -74,4 +97,9 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
     }
 
     return forgottenGod;
+}
+
+function removeFromCollection(element, collection){
+    var index = collection.value.findIndex(v => v.value === element);
+    collection.value.splice(index, 1);
 }
