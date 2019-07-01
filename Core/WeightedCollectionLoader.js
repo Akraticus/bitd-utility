@@ -1,18 +1,17 @@
-const fs = require("fs");
-const path = require("path");
 const weightedItems = require("./DataCarriers/WeightedItems.js");
 const WeightedValue = weightedItems.WeightedValue;
 const WeightedCollection = weightedItems.WeightedCollection;
 
-let root = "Core";
-let directory = "Data";
+// let root = "Core";
+// let directory = "Data";
+// let root = undefined;
 
-function getCollection(filename){
-    var finalPath = path.join(root, directory, filename);
-    if(!fs.existsSync(finalPath)) return null;
+function getCollection(jsonString){
+    if(jsonString === undefined) return undefined;
 
-    var data = fs.readFileSync(finalPath);
-    var parsed = JSON.parse(data);
+    var parsed = JSON.parse(jsonString);
+    if(parsed === undefined) return undefined;
+
     parsed = parsed.map(v => prototypeReviver(v));
     parsed = prototypeReviver(parsed);
 
@@ -41,9 +40,14 @@ function prototypeReviver(object){
 }
 
 function setDirectory(dir){
-    directory = dir;
+    this.directory = dir;
+}
+
+function setRoot(root){
+    this.root = root;
 }
 
 exports.getCollection = getCollection;
 exports.prototypeReviver = prototypeReviver;
 exports.setDirectory = setDirectory;
+exports.setRoot = setRoot;

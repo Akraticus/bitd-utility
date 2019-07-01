@@ -15,7 +15,7 @@
             "type": "node",
             "request": "launch",
             "name": "Building construction",
-            "program": "${workspaceFolder}\\Core\\DataLoadTest.js"
+            "program": "${workspaceFolder}\\Core\\BuildingLoadTest.js"
         },
         {
             "type": "node",

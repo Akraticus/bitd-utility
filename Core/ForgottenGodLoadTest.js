@@ -1,5 +1,5 @@
 const Options = require("./DataCarriers/ForgottenGod").ForgottenGodOptions;
-const Builder  = require("./Builders/ForgottenGodBuilder.js");
+const Builder  = require("./Builders/ForgottenGod/ForgottenGodBuilder.js/index.js");
 
 
 let forgottenGodOptions = new Options();

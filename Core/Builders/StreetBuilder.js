@@ -27,6 +27,7 @@ exports.getStreet = function getStreet(streetOptions){
     // Undefined || <0 => set to 0
     streetOptions.detailsAmount = streetOptions.detailsAmount === undefined || streetOptions.detailsAmount < 0 ? 0 : streetOptions.detailsAmount;
     for(var i = 0; i < streetOptions.detailsAmount; i++){
+        if(details.length <= 0) break;
         street.details.push(details.spliceRandomElement().value);
     }
 
@@ -34,6 +35,7 @@ exports.getStreet = function getStreet(streetOptions){
     // Undefined || <0 => set to 0
     streetOptions.propsAmount = streetOptions.propsAmount === undefined || streetOptions.propsAmount < 0 ? 0 : streetOptions.propsAmount;
     for(var i = 0; i < streetOptions.propsAmount; i++){
+        if(props.length <= 0) break;
         street.props.push(props.spliceRandomElement().value);
     }
 
@@ -45,6 +47,7 @@ exports.getStreet = function getStreet(streetOptions){
     // Undefined || <0 => set to 0
     impressionsOptions.sightsAmount = impressionsOptions.sightsAmount === undefined || impressionsOptions.sightsAmount < 0 ? 0 : impressionsOptions.sightsAmount;
     for(var i = 0; i < impressionsOptions.sightsAmount; i++){
+        if(sights.length <= 0) break;
         street.impressions.sights.push(sights.spliceRandomElement().value);
     }
 
@@ -52,6 +55,7 @@ exports.getStreet = function getStreet(streetOptions){
     // Undefined || <0 => set to 0
     impressionsOptions.soundsAmount = impressionsOptions.soundsAmount === undefined || impressionsOptions.soundsAmount < 0 ? 0 : impressionsOptions.soundsAmount;
     for(var i = 0; i < impressionsOptions.soundsAmount; i++){
+        if(sounds.length <= 0) break;
         street.impressions.sounds.push(sounds.spliceRandomElement().value);
     }
 
@@ -59,6 +63,7 @@ exports.getStreet = function getStreet(streetOptions){
     // Undefined || <0 => set to 0
     impressionsOptions.smellsAmount = impressionsOptions.smellsAmount === undefined || impressionsOptions.smellsAmount < 0 ? 0 : impressionsOptions.smellsAmount;
     for(var i = 0; i < impressionsOptions.smellsAmount; i++){
+        if(smells.length <= 0) break;
         street.impressions.smells.push(smells.spliceRandomElement().value);
     }
 

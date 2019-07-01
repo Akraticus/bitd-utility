@@ -3,6 +3,6 @@ const Builder  = require("./Builders/StreetBuilder.js");
 
 let options = new Options();
 options.detailsAmount = 2;
-options.propsAmount = 1;
+options.propsAmount = 400;
 let street = Builder.getStreet(options);
 console.log(street);

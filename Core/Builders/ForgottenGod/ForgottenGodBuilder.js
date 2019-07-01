@@ -1,30 +1,20 @@
-const ForgottenGod = require("../DataCarriers/ForgottenGod.js");
-const Loader = require("../WeightedCollectionLoader.js");
+const ForgottenGod = require("../../DataCarriers/ForgottenGod.js");
 
 /** Builds a ForgottenGod data-object based on the provided options. If no options are provided, defaults are used. */
-exports.getForgottenGod = function getStreet(forgottenGodOptions){
+exports.getForgottenGod = function getStreet(forgottenGodData, forgottenGodOptions){
+    if(forgottenGodData === undefined) return;
+
     // undefined => load defaults
     forgottenGodOptions = forgottenGodOptions === undefined ? new ForgottenGod.ForgottenGodOptions() : forgottenGodOptions;
-
-    Loader.setDirectory("Data/Forgotten God");
-    let names = Loader.getCollection("names.json");
-    let cultPracticeTypes = ForgottenGod.CultPracticeTypes;
-
-    Loader.setDirectory("Data/Forgotten God/Cult Practices");
-    
-    let acquisitions = Loader.getCollection("acquisition_practices.json");
-    let consecrations = Loader.getCollection("consecration_practices.json");
-    let congregations = Loader.getCollection("congregation_practices.json");
-    let desecrations = Loader.getCollection("desecration_practices.json");
-    let destructions = Loader.getCollection("destruction_practices.json");
-    let sacrifices = Loader.getCollection("sacrifice_practices.json");
 
     let forgottenGod = new ForgottenGod.ForgottenGod();
 
     // NAME
-    forgottenGod.name = names.spliceRandomElement().value;
+    let name = forgottenGodData.names.spliceRandomElement();
+    forgottenGod.name = name === undefined ? "" : name.value;
 
     // CULT PRACTICES
+    let cultPracticeTypes = ForgottenGod.CultPracticeTypes;
     let cultPracticeTypeIndex = findIndexOfElement(forgottenGodOptions.cultPracticeType, cultPracticeTypes);
 
     // this means we'll get a new cult practice type for each iteration
@@ -34,6 +24,7 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
     let cultPracticeType = cultPracticeTypeIndex < 0 
         ? cultPracticeTypes.getRandomElement().value.toLowerCase() 
         : cultPracticeTypes.value[cultPracticeTypeIndex].value.toLowerCase();
+    
     for(var i = 0; i < forgottenGodOptions.cultPracticeAmount; i++){
         
         // if the cultPracticeType option was unset, get a new one
@@ -50,56 +41,56 @@ exports.getForgottenGod = function getStreet(forgottenGodOptions){
 
             case "acquisition":
                 {
-                    if(acquisitions.length <= 0){
+                    if(forgottenGodData.acquisitions.length <= 0){
                         removeFromCollection(cultPracticeType, cultPracticeTypes);
                         break;
                     }
-                    forgottenGod.cultPractices.push(acquisitions.spliceRandomElement().value);
+                    forgottenGod.cultPractices.push(forgottenGodData.acquisitions.spliceRandomElement().value);
                     break;
                 }
             case "congregation":
                 {
-                    if(congregations.length <= 0){
+                    if(forgottenGodData.congregations.length <= 0){
                         removeFromCollection(cultPracticeType, cultPracticeTypes);
                         break;
                     }
-                    forgottenGod.cultPractices.push(congregations.spliceRandomElement().value);
+                    forgottenGod.cultPractices.push(forgottenGodData.congregations.spliceRandomElement().value);
                     break;
                 }
             case "consecration":
                 {
-                    if(consecrations.length <= 0){
+                    if(forgottenGodData.consecrations.length <= 0){
                         removeFromCollection(cultPracticeType, cultPracticeTypes);
                         break;
                     }
-                    forgottenGod.cultPractices.push(consecrations.spliceRandomElement().value);
+                    forgottenGod.cultPractices.push(forgottenGodData.consecrations.spliceRandomElement().value);
                     break;
                 }
             case "desecration":
                 {
-                    if(desecrations.length <= 0){
+                    if(forgottenGodData.desecrations.length <= 0){
                         removeFromCollection(cultPracticeType, cultPracticeTypes);
                         break;
                     }
-                    forgottenGod.cultPractices.push(desecrations.spliceRandomElement().value);
+                    forgottenGod.cultPractices.push(forgottenGodData.desecrations.spliceRandomElement().value);
                     break;
                 }
             case "destruction":
                 {
-                    if(destructions.length <= 0){
+                    if(forgottenGodData.destructions.length <= 0){
                         removeFromCollection(cultPracticeType, cultPracticeTypes);
                         break;
                     }
-                    forgottenGod.cultPractices.push(destructions.spliceRandomElement().value);
+                    forgottenGod.cultPractices.push(forgottenGodData.destructions.spliceRandomElement().value);
                     break;
                 }
             case "sacrifice":
                 {
-                    if(sacrifices.length <= 0){
+                    if(forgottenGodData.sacrifices.length <= 0){
                         removeFromCollection(cultPracticeType, cultPracticeTypes);
                         break;
                     }
-                    forgottenGod.cultPractices.push(sacrifices.spliceRandomElement().value);
+                    forgottenGod.cultPractices.push(forgottenGodData.sacrifices.spliceRandomElement().value);
                     break;
                 }
         }
