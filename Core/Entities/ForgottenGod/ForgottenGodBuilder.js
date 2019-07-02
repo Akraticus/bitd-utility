@@ -1,4 +1,4 @@
-const ForgottenGod = require("../../DataCarriers/ForgottenGod.js");
+const ForgottenGod = require("./ForgottenGod.js");
 
 /** Builds a ForgottenGod data-object based on the provided options. If no options are provided, defaults are used. */
 exports.getForgottenGod = function getStreet(forgottenGodData, forgottenGodOptions){
@@ -25,7 +25,7 @@ exports.getForgottenGod = function getStreet(forgottenGodData, forgottenGodOptio
         ? cultPracticeTypes.getRandomElement().value.toLowerCase() 
         : cultPracticeTypes.value[cultPracticeTypeIndex].value.toLowerCase();
     
-    for(var i = 0; i < forgottenGodOptions.cultPracticeAmount; i++){
+    for(var i = 0; i < forgottenGodOptions.cultPracticesAmount; i++){
         
         // if the cultPracticeType option was unset, get a new one
         // if the current cultPracticeType doesn't exist, get a new one

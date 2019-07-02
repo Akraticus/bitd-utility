@@ -1,11 +1,30 @@
-const Builder = require("../Core/Builders/StreetBuilder.js");
-const Options = require("../Core/DataCarriers/Street.js").StreetOptions;
+const Builder = require("../Core/Entities/Street/StreetBuilder.js");
+const Options = require("../Core/Entities/Street/Street.js").StreetOptions;
+const DataFetcher = require("../Core/Entities/Street/StreetDataFetcher.js");
 
 module.exports = async function (context, req) {
-    var params = req.body ? req.body : req.query;
+    var params = req.query || req.body;
     var options = new Options(params);
+    
+    let data;
+    try {
+        data = DataFetcher();
+    } catch (error) {
+        context.res = {
+            status: 500,
+            body: "Error retrieving data:\n\n" + error
+        }
+    }
 
-    context.res = {
-        body: Builder.getStreet(options)
-    };
+    try {
+        context.res = {
+            status: 200,
+            body: Builder.getStreet(data, options)
+        };
+    } catch (error) {
+        context.res = {
+            status: 500,
+            body: "Error constructing entity:\n\n" + error
+        }
+    }    
 };

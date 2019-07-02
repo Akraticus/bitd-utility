@@ -1,4 +1,4 @@
-const Building = require("../../DataCarriers/Building.js");
+const Building = require("./Building.js");
 
 /** Builds a Building data-object based on the provided data and options. If no options are provided, defaults are used. */
 exports.getBuilding = function getStreet(buildingData, buildingOptions){

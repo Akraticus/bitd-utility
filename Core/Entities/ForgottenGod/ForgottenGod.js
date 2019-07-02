@@ -1,4 +1,4 @@
-const WeightedValues = require("./WeightedItems.js");
+const WeightedValues = require("../../DataCarriers/WeightedItems.js");
 const WeightedValue = WeightedValues.WeightedValue;
 const WeightedCollection = WeightedValues.WeightedCollection;
 
@@ -16,7 +16,7 @@ class ForgottenGodOptions{
         params = params === undefined ? {} : params;
 
         this.cultPracticeType = params.cultPracticeType === undefined ? undefined : params.cultPracticeType;
-        this.cultPracticeAmount = params.cultPracticeAmount === undefined ? 1 : params.cultPracticeAmount;
+        this.cultPracticesAmount = params.cultPracticesAmount === undefined ? 1 : params.cultPracticesAmount;
     }
 }
 

@@ -1,36 +1,35 @@
-const ForgottenGod = require("../Core/DataCarriers/ForgottenGod.js");
-const DataFetcher = require("../Core/Builders/ForgottenGod/ForgottenGodDataFetcher.js");
-const Builder = require("../Core/Builders/ForgottenGodBuilder.js");
-const Options = ForgottenGod.ForgottenGodOptions;
+const DataFetcher = require("../Core/Entities/ForgottenGod/ForgottenGodDataFetcher.js");
+const Builder = require("../Core/Entities/ForgottenGod/ForgottenGodBuilder.js");
+const Options = require("../Core/Entities/ForgottenGod/ForgottenGod.js").ForgottenGodOptions;
 
 module.exports = async function (context, req) {
-    var params = req.query ? req.query : req.body || {};
+    var params = req.query || req.body;
 
     let data;
     try 
     {
-        data = DataFetcher.getForgottenGodData();
+        data = DataFetcher();
     } catch (error) 
     {
         context.res = {
             status: 500,
-            body: "Error retrieving data."
+            body: "Error retrieving data:\n\n" + error
         }
     }
-    
     
     try 
     {
         let options = new Options(params);
         var entity = Builder.getForgottenGod(data, options);
         context.res = {
+            status:200,
             body: entity
         }    
     } catch (error) 
     {
         context.res = {
             status: 500,
-            body: "Error constructing entity."
+            body: "Error constructing entity:\n\n" + error
         }
     }
 };
