@@ -20,7 +20,9 @@ class WeightedCollection extends WeightedValue{
             // we fill a new array with references to the items in the given collection; multiple references if their weight > 1
             var spreadCollection = new Array();
             collection.forEach(element => {
-                for(var i = 0; i < element.weight; i++){
+                // if weight is undefined, default to single iteration
+                var weight = element.weight ? element.weight : 1;
+                for(var i = 0; i < weight; i++){
                     spreadCollection.push(element);
                 }
             });

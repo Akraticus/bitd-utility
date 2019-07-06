@@ -21,21 +21,13 @@ class Impressions{
     }
 }
 
-class ImpressionsOptions{
+class StreetOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
         this.sightsAmount = params.sightsAmount === undefined ? 1 : params.sightsAmount;
         this.soundsAmount = params.soundsAmount === undefined ? 1 : params.soundsAmount;
         this.smellsAmount = params.smellsAmount === undefined ? 1 : params.smellsAmount;
-    }
-}
-
-class StreetOptions{
-    constructor(params) {
-        params = params === undefined ? {} : params;
-
-        this.impressionsOptions = params.impressionsOptions === undefined ? new ImpressionsOptions() : params.impressionsOptions;
         this.detailsAmount = params.detailsAmount === undefined ? 1 : params.detailsAmount;
         this.propsAmount = params.propsAmount === undefined ? 1 : params.propsAmount;
     }
@@ -44,4 +36,3 @@ class StreetOptions{
 exports.Street = Street;
 exports.StreetOptions = StreetOptions;
 exports.Impressions = Impressions;
-exports.ImpressionsOptions = ImpressionsOptions;
