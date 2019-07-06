@@ -1,5 +1,5 @@
 const FsUtil = require("../../Utilities/FsUtility.js");
-const Loader = require("../../WeightedCollectionLoader.js");
+const Loader = require("../../Utilities/WeightedCollectionLoader.js");
 const ForgottenGodData = require("../ForgottenGod/ForgottenGodData.js");
 const WeightedCollection = require("../../DataCarriers/WeightedItems.js").WeightedCollection;
 

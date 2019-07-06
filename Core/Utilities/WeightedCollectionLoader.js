@@ -1,10 +1,6 @@
-const weightedItems = require("./DataCarriers/WeightedItems.js");
+const weightedItems = require("../DataCarriers/WeightedItems.js");
 const WeightedValue = weightedItems.WeightedValue;
 const WeightedCollection = weightedItems.WeightedCollection;
-
-// let root = "Core";
-// let directory = "Data";
-// let root = undefined;
 
 function getCollection(jsonString){
     if(jsonString === undefined) return undefined;
@@ -20,7 +16,6 @@ function getCollection(jsonString){
 
 function prototypeReviver(object){
     if(object === undefined) return;
-
 
     if(Array.isArray(object)){
         var collection = new WeightedCollection();

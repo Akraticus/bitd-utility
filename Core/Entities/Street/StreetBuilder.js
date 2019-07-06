@@ -1,5 +1,4 @@
 const Street = require("./Street.js");
-const Loader = require("../../WeightedCollectionLoader.js");
 
 /** Builds a Street data-object based on the provided options. If no options are provided, defaults are used. */
 exports.getStreet = function getStreet(streetData, streetOptions){
@@ -8,7 +7,6 @@ exports.getStreet = function getStreet(streetData, streetOptions){
     // undefined => load defaults
     streetOptions = streetOptions === undefined ? new Street.StreetOptions() : streetOptions;
 
-    Loader.setDirectory("Data/Street");
     let moods = streetData.moods;
     let sights = streetData.sights;;
     let sounds = streetData.sounds;
