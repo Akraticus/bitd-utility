@@ -15,8 +15,8 @@ class ForgottenGodOptions{
     constructor(params) {
         params = params === undefined ? {} : params;
 
-        this.cultPracticeType = params.cultPracticeType === undefined ? undefined : params.cultPracticeType;
-        this.cultPracticesAmount = params.cultPracticesAmount === undefined ? 1 : params.cultPracticesAmount;
+        this.cultPracticeType = params.cultPracticeType || undefined;
+        this.cultPracticesAmount = params.cultPracticesAmount || 1;
     }
 }
 

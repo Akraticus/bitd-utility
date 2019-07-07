@@ -14,3 +14,12 @@ test("Optional cult practices amount set to 3 produces 3 cult practices in outpu
     expect(god.cultPractices).toBeDefined();
     expect(god.cultPractices.length).toBe(3);
 });
+
+test("Cult practice type equals destruction", async () => {
+    await ForgottenGod(Context, {query: {cultPracticeType:"destruction", cultPracticesAmount:1}});
+
+    var response = Context.res;
+    expect(response).toBeDefined();
+    expect(response.body).toBeDefined();
+    expect(response.body.cultPractices.find(() => true).toLowerCase().includes("destruction")).toBe(true);
+});

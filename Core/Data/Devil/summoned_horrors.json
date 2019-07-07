@@ -1,0 +1,174 @@
+[{
+    "weight":1,
+    "value":[
+        {
+            "weight":1,
+            "value":"Reeking Tar"
+        },
+        {
+            "weight":1,
+            "value":"Writhing Mass"
+        },
+        {
+            "weight":1,
+            "value":"Radiant Being"
+        },
+        {
+            "weight":1,
+            "value":"Crystalline Shards"
+        },
+        {
+            "weight":1,
+            "value":"Creeping Growth"
+        },
+        {
+            "weight":1,
+            "value":"Animated Stone"
+        }
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        {
+            "weight":1,
+            "value":"Cloud of Burning Ash"
+        },
+        {
+            "weight":1,
+            "value":"Shadow Being"
+        },
+        {
+            "weight":1,
+            "value":"Swarm of Insects"
+        },
+        {
+            "weight":1,
+            "value":"Toxic Cloud"
+        },
+        {
+            "weight":1,
+            "value":"Fiery Being"
+        },
+        {
+            "weight":1,
+            "value":"Liquid Being"
+        }
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        {
+            "weight":1,
+            "value":"Flayed Being"
+        },
+        {
+            "weight":1,
+            "value":"Shambling Rags"
+        },
+        {
+            "weight":1,
+            "value":"Freezing Fire"
+        },
+        {
+            "weight":1,
+            "value":"Impossible Geometry"
+        },
+        {
+            "weight":1,
+            "value":"Monstrous Animal"
+        },
+        {
+            "weight":1,
+            "value":"Shimmering Spheres"
+        }
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        {
+            "weight":1,
+            "value":"Twisting Machinery"
+        },
+        {
+            "weight":1,
+            "value":"Psychic Mist"
+        },
+        {
+            "weight":1,
+            "value":"Throbbing Viscera"
+        },
+        {
+            "weight":1,
+            "value":"Metallic Being"
+        },
+        {
+            "weight":1,
+            "value":"Coil of Thorns"
+        },
+        {
+            "weight":1,
+            "value":"Hypnotic Lights"
+        }
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        {
+            "weight":1,
+            "value":"Oozing Slug"
+        },
+        {
+            "weight":1,
+            "value":"Tremulous Vibrations"
+        },
+        {
+            "weight":1,
+            "value":"Lashing Hooks"
+        },
+        {
+            "weight":1,
+            "value":"Skeleton of Black Glass"
+        },
+        {
+            "weight":1,
+            "value":"Flowing Quicksilver"
+        },
+        {
+            "weight":1,
+            "value":"Clutching Darkness"
+        }
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        {
+            "weight":1,
+            "value":"Floating Octopoid"
+        },
+        {
+            "weight":1,
+            "value":"Cloying Vapors"
+        },
+        {
+            "weight":1,
+            "value":"Swirling Mucus"
+        },
+        {
+            "weight":1,
+            "value":"Serpent Being"
+        },
+        {
+            "weight":1,
+            "value":"Insectoid Being"
+        },
+        {
+            "weight":1,
+            "value":"Consuming Orb"
+        }
+    ]
+}]

@@ -1,0 +1,87 @@
+[{
+    "weight":3,
+    "value":[
+        {
+            "weight":1,
+            "value":"Frost, Chill"
+        },
+        {
+            "weight":1,
+            "value":"Cold wind"
+        },
+        {
+            "weight":1,
+            "value":"Faint visions of the local past"
+        },
+        {
+            "weight":1,
+            "value":"Electrical discharge"
+        },
+        {
+            "weight":1,
+            "value":"Weird shadows"
+        },
+        {
+            "weight":1,
+            "value":"Faint echoes"
+        }
+    ]
+},
+{
+    "weight":2,
+    "value":[
+        {
+            "weight":1,
+            "value":"Mist, Fog"
+        },
+        {
+            "weight":1,
+            "value":"Rushing wind"
+        },
+        {
+            "weight":1,
+            "value":"Intense visual echoes"
+        },
+        {
+            "weight":1,
+            "value":"Intense magnetism"
+        },
+        {
+            "weight":1,
+            "value":"Disturbing shadows"
+        },
+        {
+            "weight":1,
+            "value":"Thunderous sounds"
+        }
+    ]
+},
+{
+    "weight":1,
+    "value":[
+        {
+            "weight":1,
+            "value":"Freezing fog"
+        },
+        {
+            "weight":1,
+            "value":"Storm winds"
+        },
+        {
+            "weight":1,
+            "value":"Pitch darkness"
+        },
+        {
+            "weight":1,
+            "value":"Lightning"
+        },
+        {
+            "weight":1,
+            "value":"Clutching shadows"
+        },
+        {
+            "weight":1,
+            "value":"Voices in your head"
+        }
+    ]
+}]

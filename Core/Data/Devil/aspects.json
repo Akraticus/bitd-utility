@@ -1,0 +1,20 @@
+[{
+    "weight":2,
+    "value":"Humanoid with bestial features"
+},
+{
+    "weight":2,
+    "value":"Humanoid with elemental features"
+},
+{
+    "weight":1,
+    "value":"Animal"
+},
+{
+    "weight":1,
+    "value":"Monstrous"
+},
+{
+    "weight":1,
+    "value":"Amorphous"
+}]
