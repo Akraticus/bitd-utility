@@ -1,5 +1,5 @@
 const Street = require("../../GetStreet/index.js");
-const StreetOptions = require("../../GetDefaultStreetOptions/index.js");
+const StreetOptions = require("../../GetStreetOptions/index.js");
 const Context = require("../defaultContext.js")
 
 test("No options GetStreet response", async () => {
