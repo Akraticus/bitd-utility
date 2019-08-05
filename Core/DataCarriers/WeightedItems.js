@@ -2,7 +2,7 @@
 class WeightedValue{
     constructor(value, weight) {
         this.value = value;
-        this.weight = weight == undefined ? 1 : weight;
+        this.weight = weight || 1;
     }
 }
 
