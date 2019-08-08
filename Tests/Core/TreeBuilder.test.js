@@ -142,3 +142,18 @@ test("SearchTree - TreeBuilder: createNodesFromCollection() with weighted collec
     let result = TreeBuilder.createNodesFromCollection(WeightedValuesDepth1);
     expect(result.length).toBe(WeightedValuesDepth1.length);
 });
+
+test("SearchTree - TreeBuilder: combineRoots() has expected childnodes", () => {
+    let root1 = TreeBuilder.createRootFromCollection(WeightedValuesDepth1);
+    let root2 = TreeBuilder.createRootFromCollection(WeightedValuesDepth1);
+    let combinedRoots = TreeBuilder.combineRoots(root1, root2);
+    let allNodes = [];
+    for(var root of combinedRoots.childNodes){
+        allNodes.push(...root.childNodes);
+    }
+
+    expect(combinedRoots.childNodes.length).toBe(2);
+    expect(allNodes.length).toBe(root1.childNodes.length + root2.childNodes.length);
+    expect(root1.childNodes).toEqual(expect.arrayContaining(allNodes));
+    expect(root2.childNodes).toEqual(expect.arrayContaining(allNodes));
+});

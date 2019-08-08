@@ -122,3 +122,27 @@ test("SearchTree - Node: getRootNode() from random node returns the original roo
     let verifyRoot = result.getRootNode();
     expect(verifyRoot).toBe(root);
 });
+
+const TwoValues = [
+    {
+        value: "test1",
+        weight: 3
+    },
+    {
+        value: "test2",
+        weight: 3
+    }
+]
+
+test("SearchTree - Node: getRandomLeafNode() ignore given node from a collection of two nodes, and return expected node", () => {
+    let root = TreeBuilder.createRootFromCollection(TwoValues);
+
+    let firstNode = root.getRandomLeafNode();
+    expect(firstNode).toBeDefined();
+    expect(firstNode.data).toBeDefined();
+
+    let secondNode = root.getRandomLeafNode(firstNode);
+    expect(secondNode).toBeDefined();
+    expect(secondNode.data).toBeDefined();
+    expect(secondNode).not.toBe(firstNode);
+});

@@ -4,9 +4,16 @@ class Node{
     constructor(params) {
         params = params || {};
         this.data = params.data;
-        this.childNodes = params.childNodes;
+        this.childNodes = params.childNodes || [];
         this.parentNode = params.parentNode;
         this.weight = params.weight || 1;
+    }
+
+    addChildNode(...nodes){
+        for(var node of nodes){
+            this.childNodes.push(node);
+            node.parentNode = this;
+        }
     }
 
     getRandomLeafNode(...nodesToAvoid){

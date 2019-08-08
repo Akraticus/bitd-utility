@@ -41,5 +41,12 @@ function createNodesFromCollection(collection){
     return nodes;
 }
 
-// module.exports = TreeBuilder;
-module.exports = { createNodesFromCollection, createRootFromCollection}
+function combineRoots(...roots){
+    let combinedRoot = new Node();
+    for(var root of roots){
+        combinedRoot.addChildNode(root);
+    }
+    return combinedRoot;
+}
+
+module.exports = { createNodesFromCollection, createRootFromCollection, combineRoots}
