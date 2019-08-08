@@ -1,6 +1,8 @@
 const Node = require("../Tree Node/Node.js");
 
 function createRootFromCollection(collection){    
+    if(!collection) return null;
+
     let root = new Node({ "weight": collection.weight });
 
     // If it's not a regular array, or a WeightedCollection-type array, we break out

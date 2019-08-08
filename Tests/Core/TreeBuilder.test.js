@@ -111,6 +111,11 @@ test("SearchTree - TreeBuilder: createRootFromCollection() on non-array input re
     expect(result).toBe(null);
 });
 
+test("SearchTree - TreeBuilder: createRootFromCollection() on undefined input returns null response", () => {
+    let result = TreeBuilder.createRootFromCollection(undefined);
+    expect(result).toBe(null);
+});
+
 test("SearchTree - TreeBuilder: createRootFromCollection() with weighted collection of depth 1 returns same amount of nodes", () => {
     let result = TreeBuilder.createRootFromCollection(WeightedValuesDepth1);
     expect(result.parentNode).toBeUndefined();  // should be root; parentless

@@ -1,29 +1,30 @@
 class Building{
     constructor(params) {
-        params = params === undefined ? {} : params;
+        params = params || {};
 
         this.exterior = params.exterior === undefined ? new Exterior() : params.exterior;
-        this.use = params.use === undefined ? "" : params.use;
+        this.use = params.use;
         this.items = params.items === undefined || !Array.isArray(params.items) ? [] : params.items;
     }
 }
 
 class Exterior{
     constructor(params) {
-        params = params === undefined ? {} : params;
+        params = params || {};
 
-        this.material = params.material === undefined ? "" : params.material;
+        this.materials = params.materials === undefined || !Array.isArray(params.materials) ? [] : params.materials;
         this.details = params.details === undefined || !Array.isArray(params.details) ? [] : params.details;
     }
 }
 
 class BuildingOptions{
     constructor(params) {
-        params = params === undefined ? {} : params;
+        params = params || {};
 
-        this.itemsAmount = params.itemsAmount === undefined ? 1 : params.itemsAmount;
-        this.useType = params.useType === undefined || params.useType.toLowerCase() !== "common" || params.useType.toLowerCase() !== "rare"  ? "common" : params.useType;
-        this.detailsAmount = params.detailsAmount === undefined ? 1 : params.detailsAmount;
+        this.materialsAmount = params.materialsAmount || 0;
+        this.itemsAmount = params.itemsAmount || 0;
+        this.useType = params.useType;
+        this.detailsAmount = params.detailsAmount || 0;
     }
 }
 
