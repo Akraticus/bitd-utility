@@ -36,6 +36,7 @@
             "env": {
                 "NODE_ENV": "development"
             },
+            // https://stackoverflow.com/questions/52191409/debugging-jest-tests-in-vs-code-breakpoints-move
             "disableOptimisticBPs": true
         },
 
@@ -56,6 +57,7 @@
             "env": {
                 "NODE_ENV": "development"
             },
+            // https://stackoverflow.com/questions/52191409/debugging-jest-tests-in-vs-code-breakpoints-move
             "disableOptimisticBPs": true
         }
     ]
