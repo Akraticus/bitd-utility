@@ -21,4 +21,4 @@
         -- Valid "Range" values: any positive int except 0; char/string '*'/"*" which represents taking all data from sources
     ?? How to create conditional sources? 
         -- "Use" gets its data either from "common" or "rare" data collections depending on the option "UseType"
-
+        -- If I can solve this, then I can use this system for any entity, simplifying all my instantiation code

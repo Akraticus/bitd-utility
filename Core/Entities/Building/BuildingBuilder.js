@@ -15,12 +15,12 @@ exports.getBuilding = function getStreet(buildingData, buildingOptions){
 
     // USE
     if(buildingOptions.useType && buildingOptions.useType.toLowerCase() === "rare"){
-        building.use = buildingData.uses_rare.getRandomLeafNode().data;
+        building.use = buildingData.uses_rare.getRandomLeafNode().value;
     }
 
     // rare type wasn't hit, or the rare-list was empty
     if(!building.use){
-        building.use = buildingData.uses_common.getRandomLeafNode().data;
+        building.use = buildingData.uses_common.getRandomLeafNode().value;
     }
 
     // EXTERIOR DETAILS    
@@ -31,7 +31,7 @@ exports.getBuilding = function getStreet(buildingData, buildingOptions){
         building.exterior.details.push(detail);
     }
     // convert nodes to their inner values
-    building.exterior.details = building.exterior.details.map(v => v.data);
+    building.exterior.details = building.exterior.details.map(v => v.value);
 
     // EXTERIOR MATERIAL
     for(var i = 0; i < buildingOptions.materialsAmount; i++){
@@ -41,7 +41,7 @@ exports.getBuilding = function getStreet(buildingData, buildingOptions){
         building.exterior.materials.push(material);
     }
     // convert nodes to their inner values
-    building.exterior.materials = building.exterior.materials.map(v => v.data);
+    building.exterior.materials = building.exterior.materials.map(v => v.value);
 
     // ITEMS
     for(var i = 0; i < buildingOptions.itemsAmount; i++){
@@ -51,7 +51,7 @@ exports.getBuilding = function getStreet(buildingData, buildingOptions){
         building.items.push(item);
     }
     // convert nodes to their inner values
-    building.items = building.items.map(v => v.data);
+    building.items = building.items.map(v => v.value);
 
     return building;
 }

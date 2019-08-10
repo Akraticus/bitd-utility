@@ -1,23 +1,23 @@
 class Score{
     constructor(params) {
-        params = params === undefined ? {} : params;
+        params = params || {};
 
-        this.client = params.client === undefined ? "" : params.client;
-        this.target = params.target === undefined ? "" : params.target;
-        this.work = params.work === undefined ? "" : params.work;
-        this.complication = params.complication === undefined ? "" : params.complication;
-        this.connection = params.connection === undefined ? "" : params.connection;
-        this.faction = params.faction === undefined ? "" : params.faction;
+        this.client = params.client || [];
+        this.target = params.target || [];
+        this.work = params.work || [];
+        this.complication = params.complication || [];
+        this.connection = params.connection || [];
+        this.faction = params.faction || [];
     }
 }
 
 class ScoreOptions{
     constructor(params) {
-        params = params === undefined ? {} : params;
+        params = params || {};
 
-        this.clientType = params.clientType === undefined ? "" : params.clientType;
-        this.targetType = params.targetType === undefined ? "" : params.targetType;
-        this.workType = params.workType === undefined ? "" : params.workType;
+        this.clientType = params.clientType;
+        this.targetType = params.targetType;
+        this.workType = params.workType;
     }
 }
 

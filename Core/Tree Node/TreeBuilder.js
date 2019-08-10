@@ -1,23 +1,33 @@
-const Node = require("../Tree Node/Node.js");
+const TreeNode = require("../Tree Node/Node.js");
 
+/**
+ * Takes a collection of arbitrary depth, and converts it to a tree-structure.
+ * @param {[]} collection 
+ * @returns {TreeNode} The top node; the root.
+ */
 function createRootFromCollection(collection){    
     if(!collection) return null;
 
-    let root = new Node({ "weight": collection.weight });
-
+    let array = collection;
     // If it's not a regular array, or a WeightedCollection-type array, we break out
     if(!Array.isArray(collection)){
-        if(Array.isArray(collection.value)) collection = collection.value;
+        if(Array.isArray(collection.value)) array = collection.value;
         else return null;
     }
+    if(array.length < 1) return null;
 
-    let childNodes = this.createNodesFromCollection(collection);
-    childNodes.forEach(v => v.parentNode = root);
-    root.childNodes = childNodes;
+    let childNodes = this.createNodesFromCollection(array);
+    let root = combineRoots(...childNodes);
+    if(collection.weight) root.weight = collection.weight;
 
     return root;
 }
 
+/**
+ * Takes a collection of arbitrary depth, and converts it to a collection of nodes.
+ * @param {[]} collection 
+ * @returns {TreeNode[]}
+ */
 function createNodesFromCollection(collection){
     let nodes = [];
 
@@ -28,14 +38,16 @@ function createNodesFromCollection(collection){
     }
 
     for(let element of collection){
-        let node = new Node({"weight":element.weight});
+        let node = new TreeNode();
+
+        // sets weight, value and tags if they exist
+        Object.assign(node, element);
         
-        if(Array.isArray(element.value)){
-            var childNodes = createNodesFromCollection(element.value);
-            childNodes.forEach(v => v.parentNode = node);
-            node.childNodes = childNodes;
+        // if the value was an array, we recursively get childnodes from them
+        if(Array.isArray(node.value)){
+            var childNodes = createNodesFromCollection(node.value);
+            node.addChildNode(...childNodes);
         }
-        else node.data = element.value;
 
         nodes.push(node);
     }
@@ -43,8 +55,13 @@ function createNodesFromCollection(collection){
     return nodes;
 }
 
+/**
+ * Takes any amount of nodes, and 
+ * @param  {...TreeNode} roots 
+ * @returns {TreeNode}
+ */
 function combineRoots(...roots){
-    let combinedRoot = new Node();
+    let combinedRoot = new TreeNode();
     for(var root of roots){
         combinedRoot.addChildNode(root);
     }

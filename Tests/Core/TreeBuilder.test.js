@@ -116,11 +116,16 @@ test("SearchTree - TreeBuilder: createRootFromCollection() on undefined input re
     expect(result).toBe(null);
 });
 
+test("SearchTree - TreeBuilder: createRootFromCollection() on empty collection input returns null response", () => {
+    let result = TreeBuilder.createRootFromCollection([]);
+    expect(result).toBe(null);
+});
+
 test("SearchTree - TreeBuilder: createRootFromCollection() with weighted collection of depth 1 returns same amount of nodes", () => {
     let result = TreeBuilder.createRootFromCollection(WeightedValuesDepth1);
     expect(result.parentNode).toBeUndefined();  // should be root; parentless
     expect(result.weight).toBe(1);  // the default
-    expect(result.data).toBeUndefined();    // contains no data of its own, only leads to children
+    expect(result.value).toBeUndefined();    // contains no value of its own, only leads to children
     expect(result.childNodes.length).toBe(WeightedValuesDepth1.length);
 });
 
@@ -139,7 +144,7 @@ test("SearchTree - TreeBuilder: createNodesFromCollection() on non-array input r
 });
 
 test("SearchTree - TreeBuilder: createNodesFromCollection() on empty array input returns empty array", () => {
-    let result = TreeBuilder.createNodesFromCollection({});
+    let result = TreeBuilder.createNodesFromCollection([]);
     expect(result.length).toBe(0);
 });
 
@@ -162,3 +167,7 @@ test("SearchTree - TreeBuilder: combineRoots() has expected childnodes", () => {
     expect(root1.childNodes).toEqual(expect.arrayContaining(allNodes));
     expect(root2.childNodes).toEqual(expect.arrayContaining(allNodes));
 });
+
+// test("SearchTree - TreeBuilder: combineRoots() on two arrays produces single node with arrays as childNodes", () => {
+
+// });

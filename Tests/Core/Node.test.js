@@ -107,7 +107,7 @@ test("SearchTree - Node: getRandomLeafNode() returns node with data", () => {
 
     let result = root.getRandomLeafNode();
     expect(result).toBeDefined();
-    expect(result.data).toBeDefined();
+    expect(result.value).toBeDefined();
 });
 
 test("SearchTree - Node: getRootNode() from random node returns the original root node", () => {
@@ -117,7 +117,7 @@ test("SearchTree - Node: getRootNode() from random node returns the original roo
 
     let result = root.getRandomLeafNode();
     expect(result).toBeDefined();
-    expect(result.data).toBeDefined();
+    expect(result.value).toBeDefined();
 
     let verifyRoot = result.getRootNode();
     expect(verifyRoot).toBe(root);
@@ -139,10 +139,20 @@ test("SearchTree - Node: getRandomLeafNode() ignore given node from a collection
 
     let firstNode = root.getRandomLeafNode();
     expect(firstNode).toBeDefined();
-    expect(firstNode.data).toBeDefined();
+    expect(firstNode.value).toBeDefined();
 
     let secondNode = root.getRandomLeafNode(firstNode);
     expect(secondNode).toBeDefined();
-    expect(secondNode.data).toBeDefined();
+    expect(secondNode.value).toBeDefined();
     expect(secondNode).not.toBe(firstNode);
+});
+
+test("SearchTree - Node: applyActionableTags() with reroll-tag", () => {
+    let root = TreeBuilder.createRootFromCollection([{"value":"Ghost of", "tags":["reroll"]}, {"value":"Noble"}]);
+    let rerollNode = root.childNodes[0];
+    expect(rerollNode.tags.length).toBe(1);
+    expect(rerollNode.value).toBe("Ghost of");
+
+    let result = rerollNode.transformNodeByTags();
+    expect(result.value).toBe("Ghost of Noble");
 });
