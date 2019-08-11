@@ -1,0 +1,62 @@
+[
+    {
+        "value":"The Foundation",
+        "tier": 4,
+        "hold": "S",
+        "description":"The powerful ancient order of architects and builders. Many of their enemies have disappeared behind the brick and mortar of Doskvol."
+    },
+    {
+        "value":"Dockers",
+        "tier": 3,
+        "hold": "S",
+        "description":"The hard-bitten laborers who work the docks."
+    },
+    {
+        "value":"Gondoliers",
+        "tier": 3,
+        "hold": "S",
+        "description":"The guild of canal boat operators. Venerated by ancient tradition. Said to know occult secrets (many things are submerged in the Dusk)."
+    },
+    {
+        "value":"Laborers",
+        "tier": 3,
+        "hold": "W",
+        "description":""
+    },
+    {
+        "value":"Sailors",
+        "tier": 3,
+        "hold": "W",
+        "description":"The captains and crews for merchant and Imperial Navy ships."
+    },
+    {
+        "value":"Cabbies",
+        "tier": 2,
+        "hold": "W",
+        "description":"The public coach operators. They also breed the large Akorosian goats used to pull the carriages. An impressive gossip network."
+    },
+    {
+        "value":"Cyphers",
+        "tier": 2,
+        "hold": "S",
+        "description":"The messenger guild of the city. Cyphers swear sacred oaths of secrecy - never revealing the contents of their messages or the identities of their clients - or so they claim."
+    },
+    {
+        "value":"Ink Rakes",
+        "tier": 2,
+        "hold": "W",
+        "description":"The journalists, muck-rakers, and newspaper publishers of Duskvol."
+    },
+    {
+        "value":"Rail Jacks",
+        "tier": 2,
+        "hold": "W",
+        "description":"The men and women who protect the electro-trains of the Imperium from the savage spirits of the deathlands. Have recently been making noises about forming a union."
+    },
+    {
+        "value":"Servants",
+        "tier": 2,
+        "hold": "W",
+        "description":""
+    }
+]

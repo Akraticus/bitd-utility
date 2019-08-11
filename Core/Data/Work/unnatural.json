@@ -1,0 +1,35 @@
+[
+    {
+        "value":"Curse"
+    },
+    {
+        "value":"Sanctify"
+    },
+    {
+        "value":"Banish"
+    },
+    {
+        "value":"Summon"
+    },
+    {
+        "value":"Extract Essence"
+    },
+    {
+        "value":"Place Runes"
+    },
+    {
+        "value":"Remove Runes"
+    },
+    {
+        "value":"Perform Ritual"
+    },
+    {
+        "value":"Stop Ritual"
+    },
+    {
+        "value":"Hollow"
+    },
+    {
+        "value":"Revivify"
+    }
+]

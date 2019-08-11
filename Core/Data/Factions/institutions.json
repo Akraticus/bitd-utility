@@ -1,0 +1,86 @@
+[
+    {
+        "value":"Imperial Military",
+        "tier": 6,
+        "hold": "S",
+        "description":"The armed forces of the Imperium stationed in Duskvol. Garrisons are posted at Gaddoc Rail Station, aboard the naval destroyer Paragon, and at the Lord Governor's stronghold (about 250 troops total)."
+    },
+    {
+        "value":"City Council",
+        "tier": 5,
+        "hold": "S",
+        "description":"The elite noble rulers of the city government."
+    },
+    {
+        "value":"Leviathan Hunters",
+        "tier": 5,
+        "hold": "S",
+        "description":"The daring captains and crews that grapple with titanic demons of the Void Sea to drain their blood for processing into electroplasm."
+    },
+    {
+        "value":"Ministry of Preservation",
+        "tier": 5,
+        "hold": "S",
+        "description":"The governmental body of the Imperium that oversees all transportation between cities and the disbursement of food and other vital resources."
+    },
+    {
+        "value":"Ironhook Prison",
+        "tier": 4,
+        "hold": "S",
+        "description":"Where many scoundrels spend the bulk of their lives. Several criminal organizations are run by convicts inside its walls."
+    },
+    {
+        "value":"Sparkwrights",
+        "tier": 4,
+        "hold": "S",
+        "description":"The engineers who maintain the lightning barriers. Also pinoeers of new technology, often indulging in dangerous research."
+    },
+    {
+        "value":"Spirit Wardens",
+        "tier": 4,
+        "hold": "S",
+        "description":"The bronze-masked hunters who destroy rogue spirits. Also run Bellweather Crematorium and research artifacts scavenged in the deathlands. Membership is secret."
+    },
+    {
+        "value":"Bluecoats",
+        "tier": 3,
+        "hold": "S",
+        "description":"The City Watch of Duskwall, tasked with upholding the law. Known as the meanest gang in the city. Corrupt, violent and cruel."
+    },
+    {
+        "value":"Inspectors",
+        "tier": 3,
+        "hold": "S",
+        "description":"The criminal investigators of the City Watch. They have a reputation for ethics and integrity (no one likes them). They present evidence for prosecutions to the city magistrates."
+    },
+    {
+        "value":"Iruvian Consulate",
+        "tier": 3,
+        "hold": "S",
+        "description":""
+    },
+    {
+        "value":"Skovlan Consulate",
+        "tier": 3,
+        "hold": "W",
+        "description":""
+    },
+    {
+        "value":"The Brigade",
+        "tier": 2,
+        "hold": "S",
+        "description":"The fire-fighters of the city. Beloved for their life-saving heroism, or reviled for their looting and extortion rackets. Also known as 'Sallies' (from 'salamanders', their ancient name)."
+    },
+    {
+        "value":"Dagger Isles Consulate",
+        "tier": 1,
+        "hold": "S",
+        "description":""
+    },
+    {
+        "value":"Severosi Consulate",
+        "tier": 1,
+        "hold": "S",
+        "description":""
+    }
+]

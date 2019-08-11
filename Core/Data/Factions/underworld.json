@@ -1,0 +1,98 @@
+[
+    {
+        "value":"The Hive",
+        "tier": 4,
+        "hold": "S",
+        "description":"A guild of merchants who secretly trade in contraband. Named for their symbol, a golden bee."
+    },
+    {
+        "value":"The Unseen",
+        "tier": 4,
+        "hold": "S",
+        "description":"An insidious criminal enterprise with secret membership. Thought to pull the strings of the entire underworld."
+    },
+    {
+        "value":"The Circle of Flame",
+        "tier": 3,
+        "hold": "S",
+        "description":"A secret society of antiquarians and scholars; cover for extortion, graft, vice, and murder."
+    },
+    {
+        "value":"Lord Scurlock",
+        "tier": 3,
+        "hold": "S",
+        "description":"An ancient noble, said to be immortal, like the Emperor. Obsessed with arcane secrets."
+    },
+    {
+        "value":"The Silver Nails",
+        "tier": 3,
+        "hold": "S",
+        "description":"A company of Severosi mercenaries turned to crime when the war for Skovlan Unity ended. Renowned ghost killers."
+    },
+    {
+        "value":"The Billhooks",
+        "tier": 2,
+        "hold": "W",
+        "description":"A tough gang of thugs wielding hatchets and meat hooks."
+    },
+    {
+        "value":"The Crows",
+        "tier": 2,
+        "hold": "W",
+        "description":"An old gang with new leadership. Known for running illegal games of chance and extortion rackets."
+    },
+    {
+        "value":"The Dimmer Sisters",
+        "tier": 2,
+        "hold": "S",
+        "description":"House-bound recluses with an occult reputation."
+    },
+    {
+        "value":"The Gray Cloaks",
+        "tier": 2,
+        "hold": "S",
+        "description":"Former Bluecoats who turned to crime."
+    },
+    {
+        "value":"The Grinders",
+        "tier": 2,
+        "hold": "W",
+        "description":"A vicious gang of former dockers and leviathan blood refinery workers from Skovlan."
+    },
+    {
+        "value":"The Lampblacks",
+        "tier": 2,
+        "hold": "W",
+        "description":"The former lamp-lighter guild, turned to crime when their services were replaced by electric lights."
+    },
+    {
+        "value":"The Red Sashes",
+        "tier": 2,
+        "hold": "W",
+        "description":"Originally an Iruvian school of swordsmanship, expanded into criminal endeavours."
+    },
+    {
+        "value":"The Wraiths",
+        "tier": 2,
+        "hold": "W",
+        "description":"A mysterious crew of masked thieves and spies."
+    },
+    {
+        "value":"The Fog Hounds",
+        "tier": 1,
+        "hold": "W",
+        "description":"A crew of rough smugglers looking for a patron."
+    },
+    {
+        "value":"The Lost",
+        "tier": 1,
+        "hold": "W",
+        "description":"A group of street-toughs and ex-soldiers dedicated to protecting the downtrodden and the hopeless."
+    },
+    {
+        "value":"Ulf Ironborn",
+        "tier": 1,
+        "hold": "S",
+        "description":"A brutal Skovlander, newly arrived in Doskvol, fighting everyone for turf."
+    }
+]
