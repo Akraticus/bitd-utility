@@ -13,15 +13,19 @@ class WeightedCollection extends WeightedValue{
 
     /** Gets a reference to a random element of a leaf-array of the collection. 
      * Recursively selects random paths down to the leaf-array, and then references a random item of the leaf-array and returns it. */
-    getRandomElement(collection){
-        if(collection === undefined) collection = this.value;
+    getRandomElement(collection, previousCollections, callback){
+        if(!collection) collection = this.value;
+        if(!previousCollections) previousCollections = new Array();
+        
 
         if(Array.isArray(collection)){
+            previousCollections.push(collection);
+
             // we fill a new array with references to the items in the given collection; multiple references if their weight > 1
             var spreadCollection = new Array();
             collection.forEach(element => {
                 // if weight is undefined, default to single iteration
-                var weight = element.weight ? element.weight : 1;
+                var weight = element.weight || 1;
                 for(var i = 0; i < weight; i++){
                     spreadCollection.push(element);
                 }
@@ -31,55 +35,43 @@ class WeightedCollection extends WeightedValue{
             var randomElementIndex = randomIntFromInterval(0, spreadCollection.length - 1);
             var element = spreadCollection[randomElementIndex];
     
+            // this means that the collection has been emptied
+            if(!element) return undefined;
+            
             // we recursively try to get random elements from that element, since it can be another collection of weighted elements
-            return this.getRandomElement(element);
+            return this.getRandomElement(element, previousCollections, callback);
         }
         else if(Array.isArray( collection.value)){
-            return this.getRandomElement(collection.value);
+            return this.getRandomElement(collection.value, previousCollections, callback);
         }
         else{
-            return collection;
+            if(callback){
+                callback(collection, previousCollections);
+            }
+
+            var returnValue = new WeightedValue();
+            Object.assign(returnValue, collection);
+            if(returnValue.isAggregate){
+                // We only want to loop in here once, so if the root collection is contained in the previousCollection-array twice, we break out
+                if(previousCollections.filter(c => c === this.value).length > 1) return returnValue;
+
+                var newElement = this.getRandomElement(previousCollections[0], previousCollections);
+                returnValue.value = returnValue.value.concat(" ", newElement.value);
+            }
+
+            return returnValue;
         }
     }
 
     /** Splices out a random element of a leaf-array of the collection. 
      * Recursively selects random paths down to the leaf-array, and then splices a random item out of the leaf-array and returns it. */
-    spliceRandomElement(collection, parentCollection){
-        if(collection === undefined) collection = this.value;
-        if(parentCollection === undefined) parentCollection = collection;
-
-        
-        if(Array.isArray(collection)){
-            // we fill a new array with references to the items in the given collection; multiple references if their weight > 1
-            var spreadCollection = new Array();
-            collection.forEach(element => {
-                if(element.weight){
-                    for(var i = 0; i < element.weight; i++){
-                        spreadCollection.push(element);
-                    }
-                }
-                else{
-                    spreadCollection.push(element);
-                }
-            });
-    
-            // Get a random element from the spread list
-            var randomElementIndex = randomIntFromInterval(0, spreadCollection.length - 1);
-            var element = spreadCollection[randomElementIndex];
-            
-            // this means that the collection has been emptied
-            if(!element) return undefined;
-
-            // we recursively try to get random elements from that element, since it can be another collection of weighted elements
-            return this.spliceRandomElement(element, collection);
-        }
-        else if(Array.isArray( collection.value)){
-            return this.spliceRandomElement(collection.value, parentCollection);
-        }
-        else{
-            var index = parentCollection.indexOf(collection);
-            return parentCollection.splice(index, 1).find(() => true);
-        }
+    spliceRandomElement(){
+        var callBack = (value, previousCollections) => {
+            var lastCollection = previousCollections[previousCollections.length - 1];
+            var index = lastCollection.indexOf(value);
+            value = lastCollection.splice(index, 1).find(() => true);
+        };
+        return this.getRandomElement(this.value, null, callBack);
     }
 
     get length(){
