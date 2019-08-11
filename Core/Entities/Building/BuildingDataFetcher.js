@@ -6,7 +6,7 @@ const TreeBuilder = require("../../Tree Node/TreeBuilder.js");
 
 let defaultDirectory = "Core/Data/Building/";
 
-function getBuildingData(params){
+function getBuildingData(){
     var buildingData = new BuildingData();
 
     var exterior_details_jsonString = FsUtil.getFromFileSystemSync(defaultDirectory, "exterior_details.json");

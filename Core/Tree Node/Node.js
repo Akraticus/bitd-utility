@@ -30,8 +30,8 @@ class Node{
     /**
      * Traverses child nodes randomly, taking their weights into consideration, and returning a node at the bottom of the hierarchy.
      * Returns null result on failure.
-     * @param  {...Node} nodesToAvoid 
-     * Algorithm will not traverse these nodes, or include them as results.
+     * @param  {...Node} nodesToAvoid  Algorithm will not traverse these nodes, or include them as results.
+     * @returns {Node}
      */
     getRandomLeafNode(...nodesToAvoid){
         // Avoid using ourself
@@ -54,12 +54,6 @@ class Node{
             }
         }
 
-        // let weightMap = filteredChildNodes.map(v => new Array(v.weight).fill(v));
-        // weightMap = weightMap.reduce((prev, curr) => 
-        // {
-        //     prev.push(...curr);
-        //     return prev;
-        // });
         let index = Random(0, weightMap.length - 1);
  
         // return a random node from the randomly selected childNode
@@ -81,7 +75,7 @@ class Node{
      * Creates a copy of the node, transformed by all actionable tags.transformNodeByTags
      * @returns {Node}
      */
-    transformNodeByTags(){
+    transformByTags(){
         let returnNode = new Node();
         Object.assign(returnNode, this);
 
