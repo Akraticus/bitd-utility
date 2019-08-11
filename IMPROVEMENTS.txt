@@ -1,0 +1,24 @@
+### IMPROVEMENTS ###
+
+# Data Verification
+    -- Had a data-error where I had wrapped an array in an array in uses_common.json:
+        -- This caused TreeBuilder to fail in constructing the entire depth of the node hierarchy, ending the faulty collection with a node with no data.
+        -- This caused intermittent failed tests, and wasn't easily pinned down.
+    -- Rules-based algorithm that chews data and spits out errors?
+        -- "Arrays within arrays is not allowed."
+        -- "Empty arrays are not allowed."
+    -- Build into loader-function, or TreeBuilder?
+
+# Generic Entity Construction
+    -- Entities aren't defined in code, but in JSON following a small ruleset
+    -- Entity:
+        -- has properties, that are basic value types (int, string, bool)
+        -- properties also define their sources of data
+            -- sources are paths to files (urls maybe in the future)
+        -- properties define their name, sources, and range [1-N]
+        -- Example property:
+            {"Name":"Use", "src":[ "Building/uses_common.json", "Building/uses_rare.json"], "Range": "*"}
+        -- Valid "Range" values: any positive int except 0; char/string '*'/"*" which represents taking all data from sources
+    ?? How to create conditional sources? 
+        -- "Use" gets its data either from "common" or "rare" data collections depending on the option "UseType"
+        -- If I can solve this, then I can use this system for any entity, simplifying all my instantiation code

@@ -14,4 +14,5 @@ function getFromFileSystemSync(...args){
     return FileSystem.readFileSync(path);
 }
 
-exports.getFromFileSystemSync = getFromFileSystemSync;
+module.exports = {getFromFileSystemSync};
+// exports.getFromFileSystemSync = getFromFileSystemSync;

@@ -1,0 +1,50 @@
+[
+    {
+        "value":"The Church of Ecstacy of the Flesh",
+        "tier": 4,
+        "hold": "S",
+        "description":"The 'state religion' if there is such a thing. They honor the life of the body and abhor the corrupted spirit world. Essentially a secret society."
+    },
+    {
+        "value":"The Forgotten Gods",
+        "tier": 3,
+        "hold": "W",
+        "description":"Cults that attempt to follow the old ways from before the cataclysm, doing the bidding of demons and darker things. There are many cults, who rarely organize together. An individual cult is usually tier I or II."
+    },
+    {
+        "value":"The Horde",
+        "tier": 3,
+        "hold": "S",
+        "description":"A mass of hollows, all united in some fell purpose, controlled by an unknown power."
+    },
+    {
+        "value":"The Path of Echoes",
+        "tier": 3,
+        "hold": "S",
+        "description":"A mystery cult that borders on open rebellion against spirit laws. They revere the ancients, and seek to gain knowledge from the past - including consorting with ghosts."
+    },
+    {
+        "value":"The Reconciled",
+        "tier": 3,
+        "hold": "S",
+        "description":"An association of spirits who have not gone feral with the passage of time."
+    },
+    {
+        "value":"Skovlander Refugees",
+        "tier": 3,
+        "hold": "W",
+        "description":"Desperate survivors of the Unity War, forced to criminal opportunities when denied all others."
+    },
+    {
+        "value":"Deathland Scavengers",
+        "tier": 2,
+        "hold": "W",
+        "description":"Convicts from Ironhook and desperate freelancers who roam the wasteland beyond the lightning barriers."
+    },
+    {
+        "value":"The Weeping Lady",
+        "tier": 2,
+        "hold": "W",
+        "description":"A charity and pseudo-religion, honoring the first Lord Governor of Duskvol, Lady Devera, said to be a champion of the poor."
+    }
+]

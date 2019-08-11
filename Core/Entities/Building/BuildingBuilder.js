@@ -5,37 +5,53 @@ exports.getBuilding = function getStreet(buildingData, buildingOptions){
     if(buildingData === undefined) return;
     
     // undefined => load defaults
-    buildingOptions = buildingOptions === undefined ? new Building.BuildingOptions() : buildingOptions;
+    buildingOptions = buildingOptions || new Building.BuildingOptions();
+    buildingOptions.detailsAmount = buildingOptions.detailsAmount === undefined || buildingOptions.detailsAmount < 0 ? 0 : buildingOptions.detailsAmount;
+    buildingOptions.itemsAmount = buildingOptions.itemsAmount === undefined || buildingOptions.itemsAmount < 0 ? 0 : buildingOptions.itemsAmount;
+    buildingOptions.materialsAmount = buildingOptions.materialsAmount === undefined || buildingOptions.materialsAmount < 0 ? 0 : buildingOptions.materialsAmount;
+    
+    // instantiate return value
     let building = new Building.Building();
 
     // USE
-    if(buildingOptions.useType.toLowerCase() === "rare" && buildingData.uses_rare.length > 0){
-        building.use = buildingData.uses_rare.spliceRandomElement().value;
-    }
-    else if(buildingData.uses_common.length > 0) {
-        building.use = buildingData.uses_common.spliceRandomElement().value;
+    if(buildingOptions.useType && buildingOptions.useType.toLowerCase() === "rare"){
+        building.use = buildingData.uses_rare.getRandomLeafNode().value;
     }
 
-    // EXTERIOR DETAILS
-    // Undefined || <0 => set to 0
-    buildingOptions.detailsAmount = buildingOptions.detailsAmount === undefined || buildingOptions.detailsAmount < 0 ? 0 : buildingOptions.detailsAmount;
-    for(var i = 0; i < buildingOptions.detailsAmount; i++){
-        if(buildingData.exterior_details.length <= 0) break;
-        building.exterior.details.push(buildingData.exterior_details.spliceRandomElement().value);
+    // rare type wasn't hit, or the rare-list was empty
+    if(!building.use){
+        building.use = buildingData.uses_common.getRandomLeafNode().value;
     }
+
+    // EXTERIOR DETAILS    
+    for(var i = 0; i < buildingOptions.detailsAmount; i++){
+        let detail = buildingData.exterior_details.getRandomLeafNode(...building.exterior.details);
+        if(!detail) break;  // no more details left in collection
+
+        building.exterior.details.push(detail);
+    }
+    // convert nodes to their inner values
+    building.exterior.details = building.exterior.details.map(v => v.value);
 
     // EXTERIOR MATERIAL
-    if(buildingData.exterior_materials.length > 0){
-        building.exterior.material = buildingData.exterior_materials.spliceRandomElement().value;
-    };
+    for(var i = 0; i < buildingOptions.materialsAmount; i++){
+        let material = buildingData.exterior_materials.getRandomLeafNode(...building.exterior.materials);
+        if(!material) break;
+
+        building.exterior.materials.push(material);
+    }
+    // convert nodes to their inner values
+    building.exterior.materials = building.exterior.materials.map(v => v.value);
 
     // ITEMS
-    // Undefined || <0 => set to 0
-    buildingOptions.itemsAmount = buildingOptions.itemsAmount === undefined || buildingOptions.itemsAmount < 0 ? 0 : buildingOptions.itemsAmount;
     for(var i = 0; i < buildingOptions.itemsAmount; i++){
-        if(buildingData.items.length <= 0) break;
-        building.items.push(buildingData.items.spliceRandomElement().value);
+        let item = buildingData.items.getRandomLeafNode(...building.items);
+        if(!item) break;    // no more details left in collection
+
+        building.items.push(item);
     }
+    // convert nodes to their inner values
+    building.items = building.items.map(v => v.value);
 
     return building;
 }

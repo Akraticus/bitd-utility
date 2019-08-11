@@ -3,7 +3,6 @@ class WeightedValue{
     constructor(value, weight) {
         this.value = value;
         this.weight = weight || 1;
-        this.isAggregate = false;
     }
 }
 

@@ -1,0 +1,34 @@
+[
+    {
+        "value":"Friend",
+        "weight":3
+    },
+    {
+        "value":"Rival",
+        "weight":3
+    },
+    {
+        "value":"Vice purveyor",
+        "weight":3
+    },
+    {
+        "value":"Contact",
+        "weight":3
+    },
+    {
+        "value":"Doskvol notable",
+        "weight":3
+    },
+    {
+        "value":"Ghost",
+        "weight":1
+    },
+    {
+        "value":"Demon",
+        "weight":1
+    },
+    {
+        "value":"God",
+        "weight":1
+    }
+]
