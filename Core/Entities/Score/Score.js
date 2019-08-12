@@ -18,37 +18,32 @@ class Score{
 }
 
 class ScoreOptions{
-    constructor() {
-        this.clientTypes = ClientTypes.getAll();
-        this.targetTypes = TargetTypes.getAll();
-        this.workTypes = WorkTypes.getAll();
-        this.complicationTypes = ComplicationTypes.getAll();
-        this.factionTypes = FactionTypes.getAll();
+    constructor(params) {
+        this.clientTypes = params.clientTypes || ClientTypes.getAll();
+        this.targetTypes = params.targetTypes || TargetTypes.getAll();
+        this.workTypes = params.workTypes || WorkTypes.getAll();
+        this.complicationTypes = params.complicationTypes || ComplicationTypes.getAll();
+        this.factionTypes = params.factionTypes || FactionTypes.getAll();
     }
 
     setClientTypes(...types){
         this.clientTypes = [...types];
-        // this.clientTypes.push(...types);
     }
 
     setTargetTypes(...types){
         this.targetTypes = [...types];
-        // this.targetTypes.push(...types);
     }
 
     setWorkTypes(...types){
         this.workTypes = [...types];
-        // this.workTypes.push(...types);
     }
 
     setComplicationTypes(...types){
         this.complicationTypes = [...types];
-        // this.complicationTypes.push(...types);
     }
 
     setFactionTypes(...types){
         this.factionTypes = [...types];
-        // this.factionTypes.push(...types);
     }
 }
 
